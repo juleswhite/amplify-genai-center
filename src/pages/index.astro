@@ -1,0 +1,244 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Amplified Generative AI Innovation Center | Vanderbilt University">
+	<Header />
+	
+	<main class="pt-16 lg:pt-20">
+		<!-- Hero Section -->
+		<Hero 
+			title="Amplifying Human Potential Through AI"
+			subtitle="Augmented Intelligence Innovation"
+			description="We don't believe in replacing humans with AI. We believe in amplifying human capability, creativity, and impact through intelligent partnerships between people and technology."
+			ctaText="Explore Our Research"
+			ctaLink="/research"
+			secondaryCtaText="Meet Our Team"
+			secondaryCtaLink="/team"
+		/>
+
+		<!-- Philosophy Section -->
+		<section class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+						Our <span class="bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">Augmented Intelligence</span> Approach
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						We pioneer a future where AI and humans work together as partners, each amplifying the unique strengths of the other.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+					<div class="text-center group">
+						<div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+							</svg>
+						</div>
+						<h3 class="text-2xl font-bold text-gray-900 mb-4">Human-Centered Innovation</h3>
+						<p class="text-gray-600">AI that enhances human creativity, decision-making, and problem-solving rather than replacing human judgment.</p>
+					</div>
+
+					<div class="text-center group">
+						<div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+							</svg>
+						</div>
+						<h3 class="text-2xl font-bold text-gray-900 mb-4">Amplified Capabilities</h3>
+						<p class="text-gray-600">Extending human reach and impact through intelligent systems that learn, adapt, and scale human expertise.</p>
+					</div>
+
+					<div class="text-center group">
+						<div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+							</svg>
+						</div>
+						<h3 class="text-2xl font-bold text-gray-900 mb-4">Collaborative Intelligence</h3>
+						<p class="text-gray-600">Building systems that work alongside humans as trusted partners in research, education, and innovation.</p>
+					</div>
+				</div>
+
+				<!-- Stats -->
+				<div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+					<div class="group">
+						<div class="text-4xl font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition-colors">50+</div>
+						<div class="text-gray-600">Research Projects</div>
+					</div>
+					<div class="group">
+						<div class="text-4xl font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition-colors">25+</div>
+						<div class="text-gray-600">Industry Partners</div>
+					</div>
+					<div class="group">
+						<div class="text-4xl font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition-colors">100+</div>
+						<div class="text-gray-600">Students Trained</div>
+					</div>
+					<div class="group">
+						<div class="text-4xl font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition-colors">15+</div>
+						<div class="text-gray-600">AI Tools Deployed</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Featured Research -->
+		<section class="py-20 bg-gradient-to-br from-gray-50 to-amber-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+						Featured Research & Innovation
+					</h2>
+					<p class="text-xl text-gray-600 max-w-2xl mx-auto">
+						Discover groundbreaking projects that demonstrate the power of human-AI collaboration
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<Card 
+						title="AI Labor Playbook"
+						description="A comprehensive guide for organizations navigating the integration of AI into their workforce while maintaining human dignity and enhancing capabilities."
+						image="/images/ai-labor-playbook.jpg"
+						tag="Workforce Innovation"
+						link="/research/ai-labor-playbook"
+					/>
+					
+					<Card 
+						title="Augmented Decision Making"
+						description="Research into how AI can enhance human decision-making processes without replacing human judgment in critical situations."
+						image="/images/augmented-decisions.jpg"
+						tag="Cognitive Enhancement"
+						link="/research/augmented-decisions"
+					/>
+					
+					<Card 
+						title="Educational AI Partners"
+						description="Developing AI systems that work alongside educators to personalize learning while maintaining the essential human connection in teaching."
+						image="/images/educational-ai.jpg"
+						tag="EdTech Innovation"
+						link="/research/educational-ai"
+					/>
+				</div>
+
+				<div class="text-center mt-12">
+					<a href="/research" class="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200">
+						Explore All Research
+						<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Impact Stories -->
+		<section class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+					<div>
+						<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+							Real Impact, Real Stories
+						</h2>
+						<p class="text-xl text-gray-600 mb-8">
+							Our approach to augmented intelligence is creating measurable impact across industries, from healthcare to education to manufacturing.
+						</p>
+						
+						<div class="space-y-6">
+							<div class="flex items-start space-x-4">
+								<div class="w-8 h-8 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-lg font-semibold text-gray-900 mb-1">Healthcare Diagnostics</h3>
+									<p class="text-gray-600">40% improvement in diagnostic accuracy when AI assists human radiologists</p>
+								</div>
+							</div>
+
+							<div class="flex items-start space-x-4">
+								<div class="w-8 h-8 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-lg font-semibold text-gray-900 mb-1">Educational Outcomes</h3>
+									<p class="text-gray-600">65% increase in student engagement with AI-enhanced personalized learning</p>
+								</div>
+							</div>
+
+							<div class="flex items-start space-x-4">
+								<div class="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-lg font-semibold text-gray-900 mb-1">Research Acceleration</h3>
+									<p class="text-gray-600">3x faster hypothesis generation and testing in collaborative research environments</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="mt-8">
+							<a href="/impact" class="inline-flex items-center text-amber-600 font-semibold hover:text-amber-700 transition-colors">
+								Read more impact stories
+								<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+								</svg>
+							</a>
+						</div>
+					</div>
+
+					<div class="relative">
+						<div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+							<div class="w-full h-full bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 flex items-center justify-center">
+								<div class="text-center text-white p-8">
+									<svg class="w-24 h-24 mx-auto mb-4 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+									</svg>
+									<h3 class="text-2xl font-bold mb-2">Making Impact</h3>
+									<p class="text-lg opacity-90">Real results from human-AI collaboration</p>
+								</div>
+							</div>
+						</div>
+						<!-- Decorative elements -->
+						<div class="absolute -top-4 -left-4 w-24 h-24 bg-amber-200 rounded-full opacity-20"></div>
+						<div class="absolute -bottom-4 -right-4 w-32 h-32 bg-orange-200 rounded-full opacity-20"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Call to Action -->
+		<section class="py-20 bg-gradient-to-r from-amber-500 to-orange-500">
+			<div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+					Ready to Amplify Your Potential?
+				</h2>
+				<p class="text-xl text-amber-100 mb-8 max-w-2xl mx-auto">
+					Join us in pioneering the future of human-AI collaboration. Whether you're a researcher, industry partner, or student, there's a place for you in our community.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-200">
+						Get Involved
+						<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+						</svg>
+					</a>
+					<a href="/training" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-200">
+						Explore Training Programs
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>

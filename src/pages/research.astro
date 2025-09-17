@@ -1,0 +1,324 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+
+// Research project data
+const researchProjects = [
+	{
+		id: 1,
+		title: "AI Labor Playbook",
+		description: "A comprehensive framework for organizations to integrate AI into their workforce while preserving human dignity and enhancing capabilities. This research addresses the critical challenges of AI adoption in the workplace.",
+		image: "/images/ai-labor-playbook.jpg",
+		category: "Workforce Innovation",
+		status: "Active",
+		PI: "Dr. Jules White",
+		link: "/research/ai-labor-playbook",
+		tags: ["Future of Work", "Human-AI Collaboration", "Policy"]
+	},
+	{
+		id: 2,
+		title: "Augmented Decision Making Systems",
+		description: "Research into AI systems that enhance human decision-making processes without replacing human judgment. Focus on high-stakes environments like healthcare and finance.",
+		image: "/images/augmented-decisions.jpg",
+		category: "Cognitive Enhancement",
+		status: "Active",
+		PI: "Dr. Sarah Chen",
+		link: "/research/augmented-decisions",
+		tags: ["Decision Support", "Healthcare", "Risk Assessment"]
+	},
+	{
+		id: 3,
+		title: "Educational AI Partners",
+		description: "Developing AI systems that work alongside educators to personalize learning experiences while maintaining the essential human connection in teaching and mentorship.",
+		image: "/images/educational-ai.jpg",
+		category: "EdTech Innovation",
+		status: "Active",
+		PI: "Dr. Michael Rodriguez",
+		link: "/research/educational-ai",
+		tags: ["Personalized Learning", "Teacher Support", "Student Engagement"]
+	},
+	{
+		id: 4,
+		title: "Explainable AI for Healthcare",
+		description: "Creating transparent AI diagnostic tools that provide clear explanations for their recommendations, enabling healthcare professionals to make informed decisions.",
+		image: "/images/explainable-ai-health.jpg",
+		category: "Healthcare AI",
+		status: "Active",
+		PI: "Dr. Lisa Johnson",
+		link: "/research/explainable-ai-healthcare",
+		tags: ["Medical Diagnosis", "Transparency", "Trust"]
+	},
+	{
+		id: 5,
+		title: "Human-AI Creative Collaboration",
+		description: "Exploring how AI can amplify human creativity in design, art, and innovation without diminishing the unique value of human creative expression.",
+		image: "/images/creative-ai.jpg",
+		category: "Creative Innovation",
+		status: "Active",
+		PI: "Dr. Alex Kim",
+		link: "/research/creative-collaboration",
+		tags: ["Design", "Art", "Innovation", "Creativity"]
+	},
+	{
+		id: 6,
+		title: "Ethical AI Development Framework",
+		description: "Developing comprehensive guidelines and tools for creating AI systems that align with human values and promote social good.",
+		image: "/images/ethical-ai.jpg",
+		category: "AI Ethics",
+		status: "Active",
+		PI: "Dr. Emma Thompson",
+		link: "/research/ethical-ai-framework",
+		tags: ["Ethics", "Bias", "Fairness", "Social Good"]
+	},
+	{
+		id: 7,
+		title: "AI-Enhanced Scientific Discovery",
+		description: "Accelerating scientific research through AI that helps generate hypotheses, design experiments, and identify patterns in complex datasets.",
+		image: "/images/scientific-ai.jpg",
+		category: "Scientific Research",
+		status: "Planning",
+		PI: "Dr. Robert Park",
+		link: "/research/scientific-discovery",
+		tags: ["Research Acceleration", "Data Analysis", "Hypothesis Generation"]
+	},
+	{
+		id: 8,
+		title: "Inclusive AI Interface Design",
+		description: "Creating AI interfaces that are accessible and intuitive for users with diverse abilities, backgrounds, and technical expertise.",
+		image: "/images/inclusive-ai.jpg",
+		category: "Accessibility",
+		status: "Planning",
+		PI: "Dr. Maria Gonzalez",
+		link: "/research/inclusive-ai-design",
+		tags: ["Accessibility", "UX Design", "Inclusive Design", "Usability"]
+	}
+];
+
+const categories = ["All", "Workforce Innovation", "Cognitive Enhancement", "EdTech Innovation", "Healthcare AI", "Creative Innovation", "AI Ethics", "Scientific Research", "Accessibility"];
+---
+
+<Layout title="Research Projects | Amplified Generative AI Innovation Center">
+	<Header />
+	
+	<main class="pt-16 lg:pt-20">
+		<!-- Hero Section -->
+		<Hero 
+			title="Pioneering Research in Augmented Intelligence"
+			subtitle="Research & Innovation"
+			description="Our research focuses on developing AI systems that amplify human capabilities rather than replace them. Explore our groundbreaking projects that are shaping the future of human-AI collaboration."
+			ctaText="View Publications"
+			ctaLink="/thought-leadership"
+			secondaryCtaText="Join Our Research"
+			secondaryCtaLink="/contact"
+		/>
+
+		<!-- Research Overview Stats -->
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+					<div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl">
+						<div class="text-3xl font-bold text-blue-600 mb-2">50+</div>
+						<div class="text-gray-700 font-medium">Active Research Projects</div>
+					</div>
+					<div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
+						<div class="text-3xl font-bold text-green-600 mb-2">25</div>
+						<div class="text-gray-700 font-medium">Research Publications</div>
+					</div>
+					<div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl">
+						<div class="text-3xl font-bold text-purple-600 mb-2">15</div>
+						<div class="text-gray-700 font-medium">Industry Partners</div>
+					</div>
+					<div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl">
+						<div class="text-3xl font-bold text-amber-600 mb-2">8</div>
+						<div class="text-gray-700 font-medium">Research Areas</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Research Projects -->
+		<section class="py-20 bg-gradient-to-br from-gray-50 to-amber-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+						Current Research Projects
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Discover how we're advancing the field of augmented intelligence through innovative research and real-world applications
+					</p>
+				</div>
+
+				<!-- Filter Buttons -->
+				<div class="flex flex-wrap justify-center gap-2 mb-12" id="category-filters">
+					{categories.map((category, index) => (
+						<button 
+							class={`filter-btn px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 hover:scale-105 border ${index === 0 ? 'bg-amber-500 text-white border-amber-500' : 'bg-white text-gray-700 hover:bg-gray-100 border-gray-200'}`}
+							data-category={category}
+						>
+							{category}
+						</button>
+					))}
+				</div>
+
+				<!-- Research Grid -->
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="research-grid">
+					{researchProjects.map((project) => (
+						<div class="research-card" data-category={project.category}>
+							<Card 
+								title={project.title}
+								description={project.description}
+								image={project.image}
+								tag={project.category}
+								link={project.link}
+								className="h-full"
+							>
+								<div slot="extra-content" class="px-6 pb-6 pt-0">
+									<div class="flex items-center justify-between mb-3">
+										<span class="text-sm font-medium text-gray-700">PI: {project.PI}</span>
+										<span class={`px-2 py-1 text-xs font-medium rounded-full ${
+											project.status === 'Active' 
+												? 'bg-green-100 text-green-800' 
+												: 'bg-yellow-100 text-yellow-800'
+										}`}>
+											{project.status}
+										</span>
+									</div>
+									<div class="flex flex-wrap gap-1">
+										{project.tags.map((tag) => (
+											<span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
+												{tag}
+											</span>
+										))}
+									</div>
+								</div>
+							</Card>
+						</div>
+					))}
+				</div>
+
+				<!-- No Results Message -->
+				<div id="no-results" class="hidden text-center py-12">
+					<svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+					</svg>
+					<h3 class="text-lg font-medium text-gray-900 mb-2">No projects found</h3>
+					<p class="text-gray-600">Try selecting a different category or view all projects.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Research Impact -->
+		<section class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+						Research Impact & Recognition
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Our research is making real-world impact and gaining recognition in the global AI community
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+					<div class="text-center group">
+						<div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+							<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-4">Award-Winning Research</h3>
+						<p class="text-gray-600">Recognized by leading AI conferences and industry organizations for groundbreaking contributions to augmented intelligence.</p>
+					</div>
+
+					<div class="text-center group">
+						<div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+							<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-4">Industry Collaboration</h3>
+						<p class="text-gray-600">Partnering with leading organizations to translate research insights into practical solutions that benefit society.</p>
+					</div>
+
+					<div class="text-center group">
+						<div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+							<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-4">Open Science</h3>
+						<p class="text-gray-600">Committed to open research practices, sharing code, datasets, and findings to advance the global AI research community.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Call to Action -->
+		<section class="py-20 bg-gradient-to-r from-amber-500 to-orange-500">
+			<div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+					Join Our Research Community
+				</h2>
+				<p class="text-xl text-amber-100 mb-8">
+					Whether you're a student, researcher, or industry partner, there are many ways to get involved in our groundbreaking research.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-200">
+						Collaborate With Us
+					</a>
+					<a href="/thought-leadership" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-200">
+						View Publications
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<script>
+	// Filter functionality
+	document.addEventListener('DOMContentLoaded', function() {
+		const filterButtons = document.querySelectorAll('.filter-btn');
+		const researchCards = document.querySelectorAll('.research-card');
+		const noResults = document.getElementById('no-results');
+
+		filterButtons.forEach(button => {
+			button.addEventListener('click', function() {
+				const category = this.dataset.category;
+
+				// Update active button
+				filterButtons.forEach(btn => {
+					btn.classList.remove('bg-amber-500', 'text-white', 'border-amber-500');
+					btn.classList.add('bg-white', 'text-gray-700', 'hover:bg-gray-100', 'border-gray-200');
+				});
+				
+				this.classList.add('bg-amber-500', 'text-white', 'border-amber-500');
+				this.classList.remove('bg-white', 'text-gray-700', 'hover:bg-gray-100', 'border-gray-200');
+
+				// Filter cards
+				let visibleCount = 0;
+				researchCards.forEach(card => {
+					if (category === 'All' || card.dataset.category === category) {
+						card.style.display = 'block';
+						visibleCount++;
+					} else {
+						card.style.display = 'none';
+					}
+				});
+
+				// Show/hide no results message
+				if (visibleCount === 0) {
+					noResults?.classList.remove('hidden');
+				} else {
+					noResults?.classList.add('hidden');
+				}
+			});
+		});
+	});
+</script>
+

@@ -1,0 +1,277 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Training Programs | Amplified Generative AI Innovation Center">
+	<Header />
+	
+	<main class="pt-16 lg:pt-20">
+		<Hero 
+			title="Training the Next Generation"
+			subtitle="Education & Training Programs"
+			description="Our comprehensive training programs prepare individuals and organizations to harness the power of augmented intelligence, emphasizing ethical AI development and human-centered design."
+			ctaText="Apply Now"
+			ctaLink="/contact"
+			secondaryCtaText="View Course Catalog"
+			secondaryCtaLink="#programs"
+		/>
+
+		<!-- Training Programs -->
+		<section id="programs" class="py-20 bg-gradient-to-br from-gray-50 to-amber-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+						Our Training Programs
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						From foundational concepts to advanced applications, our programs are designed for learners at every level
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+					<Card 
+						title="Executive AI Leadership"
+						description="Strategic program for executives and decision-makers on implementing AI while maintaining human-centered values and ethical practices."
+						tag="Executive Education"
+						className="border-2 border-amber-200"
+					>
+						<div class="px-6 pb-6 pt-0">
+							<div class="flex items-center justify-between mb-4">
+								<span class="text-sm font-medium text-gray-700">Duration: 3 days</span>
+								<span class="px-3 py-1 bg-amber-100 text-amber-800 text-sm rounded-full">Certificate</span>
+							</div>
+							<ul class="text-sm text-gray-600 space-y-1 mb-4">
+								<li>• AI Strategy & Implementation</li>
+								<li>• Ethical AI Frameworks</li>
+								<li>• Change Management</li>
+								<li>• ROI Assessment</li>
+							</ul>
+							<a href="/contact" class="inline-flex items-center text-amber-600 font-medium hover:text-amber-700 transition-colors">
+								Learn More →
+							</a>
+						</div>
+					</Card>
+
+					<Card 
+						title="AI Developer Bootcamp"
+						description="Intensive technical program for developers and engineers focusing on building AI systems that amplify human capabilities."
+						tag="Technical Training"
+						className="border-2 border-blue-200"
+					>
+						<div class="px-6 pb-6 pt-0">
+							<div class="flex items-center justify-between mb-4">
+								<span class="text-sm font-medium text-gray-700">Duration: 8 weeks</span>
+								<span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Certificate</span>
+							</div>
+							<ul class="text-sm text-gray-600 space-y-1 mb-4">
+								<li>• Human-AI Interface Design</li>
+								<li>• Explainable AI Development</li>
+								<li>• Bias Detection & Mitigation</li>
+								<li>• Production AI Systems</li>
+							</ul>
+							<a href="/contact" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors">
+								Learn More →
+							</a>
+						</div>
+					</Card>
+
+					<Card 
+						title="Educator AI Workshop"
+						description="Professional development for educators on integrating AI tools while maintaining the human connection essential to effective teaching."
+						tag="Education"
+						className="border-2 border-green-200"
+					>
+						<div class="px-6 pb-6 pt-0">
+							<div class="flex items-center justify-between mb-4">
+								<span class="text-sm font-medium text-gray-700">Duration: 2 days</span>
+								<span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Workshop</span>
+							</div>
+							<ul class="text-sm text-gray-600 space-y-1 mb-4">
+								<li>• AI-Enhanced Pedagogy</li>
+								<li>• Personalized Learning</li>
+								<li>• Assessment Tools</li>
+								<li>• Digital Citizenship</li>
+							</ul>
+							<a href="/contact" class="inline-flex items-center text-green-600 font-medium hover:text-green-700 transition-colors">
+								Learn More →
+							</a>
+						</div>
+					</Card>
+				</div>
+			</div>
+		</section>
+
+		<!-- Student Programs -->
+		<section class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+						Student Programs
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Comprehensive academic programs and research opportunities for the next generation of AI researchers
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+					<div>
+						<h3 class="text-2xl font-bold text-gray-900 mb-6">Graduate Research</h3>
+						<div class="space-y-6">
+							<div class="flex items-start space-x-4">
+								<div class="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+									</svg>
+								</div>
+								<div>
+									<h4 class="text-lg font-semibold text-gray-900 mb-2">PhD Research Fellowships</h4>
+									<p class="text-gray-600">Full funding for doctoral research in augmented intelligence, human-AI collaboration, and ethical AI development.</p>
+								</div>
+							</div>
+
+							<div class="flex items-start space-x-4">
+								<div class="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+									</svg>
+								</div>
+								<div>
+									<h4 class="text-lg font-semibold text-gray-900 mb-2">Masters Thesis Support</h4>
+									<p class="text-gray-600">Mentorship and resources for masters students conducting research in AI ethics, human-computer interaction, and more.</p>
+								</div>
+							</div>
+
+							<div class="flex items-start space-x-4">
+								<div class="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+									</svg>
+								</div>
+								<div>
+									<h4 class="text-lg font-semibold text-gray-900 mb-2">Interdisciplinary Collaboration</h4>
+									<p class="text-gray-600">Cross-departmental research opportunities spanning computer science, psychology, ethics, and design.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<h3 class="text-2xl font-bold text-gray-900 mb-6">Undergraduate Opportunities</h3>
+						<div class="space-y-6">
+							<div class="flex items-start space-x-4">
+								<div class="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+									</svg>
+								</div>
+								<div>
+									<h4 class="text-lg font-semibold text-gray-900 mb-2">Research Assistant Positions</h4>
+									<p class="text-gray-600">Hands-on research experience working directly with faculty on cutting-edge AI projects.</p>
+								</div>
+							</div>
+
+							<div class="flex items-start space-x-4">
+								<div class="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+									</svg>
+								</div>
+								<div>
+									<h4 class="text-lg font-semibold text-gray-900 mb-2">Summer Research Program</h4>
+									<p class="text-gray-600">Intensive 10-week summer research program with stipend and mentorship from faculty and graduate students.</p>
+								</div>
+							</div>
+
+							<div class="flex items-start space-x-4">
+								<div class="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+									</svg>
+								</div>
+								<div>
+									<h4 class="text-lg font-semibold text-gray-900 mb-2">Capstone Projects</h4>
+									<p class="text-gray-600">Senior capstone projects in partnership with industry collaborators, focusing on real-world AI applications.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Industry Training -->
+		<section class="py-20 bg-gradient-to-br from-gray-50 to-amber-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+						Industry Training & Consulting
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Customized training solutions for organizations looking to implement ethical AI practices
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center">
+					<div class="bg-white p-8 rounded-xl shadow-lg">
+						<div class="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-4">Workforce Training</h3>
+						<p class="text-gray-600 mb-6">Help your teams understand and effectively work with AI tools while maintaining human expertise and judgment.</p>
+						<a href="/contact" class="text-amber-600 font-semibold hover:text-amber-700 transition-colors">Learn More →</a>
+					</div>
+
+					<div class="bg-white p-8 rounded-xl shadow-lg">
+						<div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-4">Ethics & Governance</h3>
+						<p class="text-gray-600 mb-6">Develop comprehensive AI governance frameworks, ethical guidelines, and bias mitigation strategies for your organization.</p>
+						<a href="/contact" class="text-blue-600 font-semibold hover:text-blue-700 transition-colors">Learn More →</a>
+					</div>
+
+					<div class="bg-white p-8 rounded-xl shadow-lg">
+						<div class="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-4">Innovation Strategy</h3>
+						<p class="text-gray-600 mb-6">Strategic consulting on implementing AI innovations that amplify human capabilities and drive business value.</p>
+						<a href="/contact" class="text-green-600 font-semibold hover:text-green-700 transition-colors">Learn More →</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Call to Action -->
+		<section class="py-20 bg-gradient-to-r from-amber-500 to-orange-500">
+			<div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+					Ready to Start Your AI Journey?
+				</h2>
+				<p class="text-xl text-amber-100 mb-8">
+					Whether you're a student, professional, or organization, we have training programs designed to help you succeed in the age of augmented intelligence.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-200">
+						Apply Today
+					</a>
+					<a href="/research" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-200">
+						Explore Research
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>

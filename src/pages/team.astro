@@ -1,0 +1,304 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Footer from '../components/Footer.astro';
+
+// Team member data
+const leadership = [
+	{
+		name: "Dr. Jules White",
+		title: "Director, Amplified Generative AI Innovation Center",
+		bio: "Leading expert in software engineering, AI systems, and human-computer interaction. Jules has published over 100 research papers and leads groundbreaking research in augmented intelligence.",
+		image: "/images/team/jules-white.jpg",
+		expertise: ["AI Systems", "Software Engineering", "Human-AI Interaction"],
+		email: "jules.white@vanderbilt.edu",
+		twitter: "@juleswhite",
+		linkedin: "juleswhite"
+	},
+	{
+		name: "Dr. Sarah Chen",
+		title: "Associate Director of Research",
+		bio: "Expert in cognitive science and human decision-making. Sarah's research focuses on how AI can enhance human cognitive capabilities in complex decision-making scenarios.",
+		image: "/images/team/sarah-chen.jpg",
+		expertise: ["Cognitive Science", "Decision Making", "Human Factors"],
+		email: "sarah.chen@vanderbilt.edu",
+		linkedin: "sarahchen"
+	}
+];
+
+const faculty = [
+	{
+		name: "Dr. Michael Rodriguez",
+		title: "Research Scientist, Educational AI",
+		bio: "Specializes in AI applications in education and personalized learning systems. Michael leads our efforts in developing AI tutoring systems that enhance rather than replace human teaching.",
+		image: "/images/team/michael-rodriguez.jpg",
+		expertise: ["Educational Technology", "Personalized Learning", "AI Tutoring"],
+		email: "michael.rodriguez@vanderbilt.edu"
+	},
+	{
+		name: "Dr. Lisa Johnson",
+		title: "Research Scientist, Healthcare AI",
+		bio: "Medical doctor and AI researcher focused on explainable AI in healthcare. Lisa works on developing transparent AI diagnostic tools that support medical decision-making.",
+		image: "/images/team/lisa-johnson.jpg",
+		expertise: ["Medical AI", "Explainable AI", "Healthcare Informatics"],
+		email: "lisa.johnson@vanderbilt.edu"
+	},
+	{
+		name: "Dr. Alex Kim",
+		title: "Research Scientist, Creative AI",
+		bio: "Artist and computer scientist exploring the intersection of AI and creativity. Alex researches how AI can amplify human creative expression without diminishing artistic authenticity.",
+		image: "/images/team/alex-kim.jpg",
+		expertise: ["Creative AI", "Design", "Human-Computer Interaction"],
+		email: "alex.kim@vanderbilt.edu"
+	},
+	{
+		name: "Dr. Emma Thompson",
+		title: "Research Scientist, AI Ethics",
+		bio: "Philosophy and computer science background with focus on AI ethics and fairness. Emma leads our efforts in developing ethical AI frameworks and bias mitigation strategies.",
+		image: "/images/team/emma-thompson.jpg",
+		expertise: ["AI Ethics", "Fairness", "Policy", "Philosophy"],
+		email: "emma.thompson@vanderbilt.edu"
+	}
+];
+
+const fellows = [
+	{
+		name: "David Park",
+		title: "Doctoral Fellow",
+		program: "Computer Science PhD",
+		research: "Human-AI collaborative problem solving in scientific research",
+		image: "/images/team/david-park.jpg",
+		year: "4th Year"
+	},
+	{
+		name: "Maria Santos",
+		title: "Postdoctoral Fellow",
+		program: "Cognitive Science",
+		research: "Augmented decision-making in high-stakes environments",
+		image: "/images/team/maria-santos.jpg",
+		year: "2nd Year Postdoc"
+	},
+	{
+		name: "James Wright",
+		title: "Graduate Research Assistant",
+		program: "Electrical Engineering MS",
+		research: "AI-assisted design tools for engineering applications",
+		image: "/images/team/james-wright.jpg",
+		year: "2nd Year"
+	},
+	{
+		name: "Priya Patel",
+		title: "Undergraduate Research Fellow",
+		program: "Computer Science & Psychology",
+		research: "User experience design for human-AI interfaces",
+		image: "/images/team/priya-patel.jpg",
+		year: "Junior"
+	}
+];
+---
+
+<Layout title="Our Team | Amplified Generative AI Innovation Center">
+	<Header />
+	
+	<main class="pt-16 lg:pt-20">
+		<!-- Hero Section -->
+		<Hero 
+			title="Meet Our Extraordinary Team"
+			subtitle="The People Behind the Innovation"
+			description="Our multidisciplinary team brings together experts from computer science, cognitive psychology, ethics, education, and design to advance augmented intelligence research."
+			ctaText="Join Our Team"
+			ctaLink="/contact"
+			secondaryCtaText="See Open Positions"
+			secondaryCtaLink="/careers"
+		/>
+
+		<!-- Leadership Team -->
+		<section class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Leadership</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Our leadership team guides the vision and strategic direction of augmented intelligence research at Vanderbilt.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+					{leadership.map((member) => (
+						<div class="group">
+							<div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
+								<div class="aspect-w-16 aspect-h-12 bg-gradient-to-br from-gray-100 to-gray-200">
+									<div class="w-full h-64 bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 flex items-center justify-center">
+										<div class="text-center text-white">
+											<div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+												<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+													<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+												</svg>
+											</div>
+											<p class="text-sm opacity-75">Photo Coming Soon</p>
+										</div>
+									</div>
+								</div>
+								<div class="p-8">
+									<h3 class="text-2xl font-bold text-gray-900 mb-2">{member.name}</h3>
+									<p class="text-lg text-amber-600 font-semibold mb-4">{member.title}</p>
+									<p class="text-gray-600 mb-6 leading-relaxed">{member.bio}</p>
+									
+									<div class="mb-6">
+										<h4 class="text-sm font-semibold text-gray-900 mb-2">Expertise</h4>
+										<div class="flex flex-wrap gap-2">
+											{member.expertise.map((skill) => (
+												<span class="px-3 py-1 bg-amber-100 text-amber-800 text-sm rounded-full">
+													{skill}
+												</span>
+											))}
+										</div>
+									</div>
+
+									<div class="flex items-center space-x-4">
+										{member.email && (
+											<a href={`mailto:${member.email}`} class="text-gray-500 hover:text-amber-600 transition-colors">
+												<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+													<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+												</svg>
+											</a>
+										)}
+										{member.linkedin && (
+											<a href={`https://linkedin.com/in/${member.linkedin}`} class="text-gray-500 hover:text-blue-600 transition-colors" target="_blank" rel="noopener">
+												<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+													<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+												</svg>
+											</a>
+										)}
+										{member.twitter && (
+											<a href={`https://twitter.com/${member.twitter}`} class="text-gray-500 hover:text-blue-400 transition-colors" target="_blank" rel="noopener">
+												<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+													<path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+												</svg>
+											</a>
+										)}
+									</div>
+								</div>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<!-- Faculty -->
+		<section class="py-20 bg-gradient-to-br from-gray-50 to-amber-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Faculty Researchers</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Our faculty bring diverse expertise from multiple disciplines to advance the frontiers of augmented intelligence.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+					{faculty.map((member) => (
+						<div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+							<div class="aspect-w-16 aspect-h-9 bg-gradient-to-br from-gray-100 to-gray-200">
+								<div class="w-full h-48 bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 flex items-center justify-center">
+									<div class="text-center text-white">
+										<div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+											<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+											</svg>
+										</div>
+										<p class="text-sm opacity-75">Photo Coming Soon</p>
+									</div>
+								</div>
+							</div>
+							<div class="p-6">
+								<h3 class="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
+								<p class="text-amber-600 font-semibold mb-3">{member.title}</p>
+								<p class="text-gray-600 mb-4 text-sm leading-relaxed">{member.bio}</p>
+								
+								<div class="mb-4">
+									<div class="flex flex-wrap gap-1">
+										{member.expertise.map((skill) => (
+											<span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">
+												{skill}
+											</span>
+										))}
+									</div>
+								</div>
+
+								<div class="flex items-center">
+									{member.email && (
+										<a href={`mailto:${member.email}`} class="text-gray-500 hover:text-amber-600 transition-colors">
+											<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+											</svg>
+										</a>
+									)}
+								</div>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<!-- Fellows and Students -->
+		<section class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Fellows & Students</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						The next generation of augmented intelligence researchers, bringing fresh perspectives and innovative ideas to our work.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+					{fellows.map((fellow) => (
+						<div class="bg-white border border-gray-200 rounded-lg hover:shadow-lg transition-shadow duration-300 overflow-hidden group">
+							<div class="aspect-w-1 aspect-h-1 bg-gradient-to-br from-gray-100 to-gray-200">
+								<div class="w-full h-40 bg-gradient-to-br from-green-400 via-cyan-500 to-blue-500 flex items-center justify-center">
+									<div class="text-center text-white">
+										<div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
+											<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+											</svg>
+										</div>
+										<p class="text-xs opacity-75">Photo Coming Soon</p>
+									</div>
+								</div>
+							</div>
+							<div class="p-4">
+								<h3 class="text-lg font-bold text-gray-900 mb-1">{fellow.name}</h3>
+								<p class="text-amber-600 font-medium text-sm mb-1">{fellow.title}</p>
+								<p class="text-gray-500 text-sm mb-2">{fellow.program} • {fellow.year}</p>
+								<p class="text-gray-600 text-sm leading-tight">{fellow.research}</p>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<!-- Join Our Team -->
+		<section class="py-20 bg-gradient-to-r from-amber-500 to-orange-500">
+			<div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+					Join Our Mission
+				</h2>
+				<p class="text-xl text-amber-100 mb-8">
+					We're always looking for passionate researchers, students, and collaborators who share our vision of augmented intelligence. Join us in shaping the future of human-AI collaboration.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-200">
+						Get in Touch
+					</a>
+					<a href="/careers" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-200">
+						View Open Positions
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
