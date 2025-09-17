@@ -1,0 +1,372 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Thought Leadership | Amplified Generative AI Innovation Center">
+	<Header />
+	
+	<main class="pt-16 lg:pt-20">
+		<Hero 
+			title="Shaping the Global AI Conversation"
+			subtitle="Publications & Thought Leadership"
+			description="Our research and insights reach millions through major media outlets, academic publications, and policy discussions, influencing how the world thinks about augmented intelligence."
+			ctaText="View Publications"
+			ctaLink="#publications"
+			secondaryCtaText="Media Coverage"
+			secondaryCtaLink="#media"
+		/>
+
+		<!-- Impact Stats -->
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+					<div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl">
+						<div class="text-3xl font-bold text-blue-600 mb-2">71+</div>
+						<div class="text-gray-700 font-medium">Keynote Presentations</div>
+					</div>
+					<div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
+						<div class="text-3xl font-bold text-green-600 mb-2">1,500+</div>
+						<div class="text-gray-700 font-medium">Research Citations</div>
+					</div>
+					<div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl">
+						<div class="text-3xl font-bold text-purple-600 mb-2">Major</div>
+						<div class="text-gray-700 font-medium">Media Coverage</div>
+					</div>
+					<div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl">
+						<div class="text-3xl font-bold text-amber-600 mb-2">Policy</div>
+						<div class="text-gray-700 font-medium">Impact</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Key Publications -->
+		<section id="publications" class="py-20 bg-gradient-to-br from-gray-50 to-amber-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+						Key Publications & Research
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Foundational research that has shaped the field of augmented intelligence and prompt engineering
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+					<!-- Prompt Pattern Catalog -->
+					<div class="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow">
+						<div class="flex items-center mb-6">
+							<div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-lg flex items-center justify-center mr-4">
+								<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-2xl font-bold text-gray-900">A Prompt Pattern Catalog to Enhance Prompt Engineering</h3>
+								<p class="text-amber-600 font-medium">Jules White et al. • 2023 • 1,500+ Citations</p>
+							</div>
+						</div>
+						<p class="text-gray-600 mb-6 leading-relaxed">
+							Seminal research establishing fundamental patterns for effective human-AI interaction. This work has become essential reading for AI practitioners worldwide and has been adopted by major technology companies.
+						</p>
+						<div class="flex items-center space-x-4">
+							<a href="/research/prompt-patterns" class="inline-flex items-center px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition-colors">
+								Learn More
+							</a>
+							<a href="https://arxiv.org/abs/2302.11382" target="_blank" rel="noopener" class="text-gray-600 hover:text-amber-600 transition-colors">
+								View Paper →
+							</a>
+						</div>
+					</div>
+
+					<!-- AI is Labor -->
+					<div class="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow">
+						<div class="flex items-center mb-6">
+							<div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-lg flex items-center justify-center mr-4">
+								<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-2xl font-bold text-gray-900">AI is Labor: Rethinking Workforce Transformation</h3>
+								<p class="text-blue-600 font-medium">Jules White • 2024 • Viral Impact</p>
+							</div>
+						</div>
+						<p class="text-gray-600 mb-6 leading-relaxed">
+							Groundbreaking framework for understanding AI's role in augmenting human capabilities rather than replacing workers. This work has influenced corporate AI strategies across Fortune 500 companies.
+						</p>
+						<div class="flex items-center space-x-4">
+							<a href="/research/ai-labor" class="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+								Learn More
+							</a>
+							<a href="https://linkedin.com/posts/jules-white-5717655_ai-labor-activity-7265718817249468418-LmEr/" target="_blank" rel="noopener" class="text-gray-600 hover:text-blue-600 transition-colors">
+								View Post →
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- ChatGPT Prompt Patterns Book Chapter -->
+				<div class="bg-white rounded-xl shadow-lg p-8">
+					<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+						<div class="lg:col-span-2">
+							<h3 class="text-2xl font-bold text-gray-900 mb-4">ChatGPT Prompt Patterns for Improving Code Quality, Refactoring, Requirements Elicitation, and Software Design</h3>
+							<p class="text-purple-600 font-medium mb-4">Jules White • 2024 Book Chapter • 300+ Citations</p>
+							<p class="text-gray-600 leading-relaxed">
+								This book chapter demonstrates practical applications of prompt patterns in software engineering contexts. With over 300 citations in just months, it shows the rapid adoption of these techniques in the developer community.
+							</p>
+						</div>
+						<div class="text-center">
+							<div class="text-4xl font-bold text-purple-600 mb-2">300+</div>
+							<div class="text-gray-700 font-medium mb-4">Citations in Months</div>
+							<a href="#" class="inline-flex items-center px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors">
+								View Chapter
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Media Coverage -->
+		<section id="media" class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+						Major Media Coverage
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Our research and insights have been featured in top-tier media outlets, reaching millions of readers worldwide
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- TIME Magazine -->
+					<Card 
+						title="The Future of Censorship Is AI-Generated"
+						description="TIME Magazine op-ed examining how AI could both enable and curb online censorship, advocating for balanced AI governance approaches."
+						tag="TIME Magazine"
+						link="https://time.com/6835213/the-future-of-censorship-is-ai-generated/"
+						date="February 2024"
+						author="Jules White"
+						className="border-t-4 border-red-500"
+					/>
+
+					<!-- Wall Street Journal -->
+					<Card 
+						title="The Future is Augmented Intelligence"
+						description="Featured profile highlighting Vanderbilt's approach to prompt engineering and the philosophy that 'the future is not artificial intelligence, it's augmented intelligence.'"
+						tag="Wall Street Journal"
+						link="#"
+						date="2024"
+						author="Jules White Profile"
+						className="border-t-4 border-blue-500"
+					/>
+
+					<!-- The Guardian -->
+					<Card 
+						title="Parents and Children in the Age of AI"
+						description="Expert commentary on teaching children to use AI responsibly, warning against 'intellectual laziness' while embracing AI's educational potential."
+						tag="The Guardian"
+						link="#"
+						date="2024"
+						author="Jules White Interview"
+						className="border-t-4 border-green-500"
+					/>
+
+					<!-- CNN/Bloomberg/Nature -->
+					<Card 
+						title="Proactive AI Integration in Higher Education"
+						description="Multiple features across CNN, Bloomberg, and Nature highlighting Vanderbilt's leadership in embracing AI as an educational opportunity rather than a threat."
+						tag="Multiple Outlets"
+						link="#"
+						date="2024"
+						author="Various Features"
+						className="border-t-4 border-purple-500"
+					/>
+
+					<!-- NPR Marketplace -->
+					<Card 
+						title="Academic Integrity in the AI Era"
+						description="Featured discussion on how universities are adapting academic integrity policies for the age of generative AI, showcasing Vanderbilt's approach."
+						tag="NPR Marketplace"
+						link="#"
+						date="2024"
+						author="Academic Policy Feature"
+						className="border-t-4 border-orange-500"
+					/>
+
+					<!-- Chronicle of Higher Education -->
+					<Card 
+						title="University AI Platform Innovation"
+						description="Coverage of the Amplify platform's impact across higher education, including adoption by 40+ institutions and significant cost savings."
+						tag="Chronicle of Higher Ed"
+						link="#"
+						date="2024"
+						author="Platform Coverage"
+						className="border-t-4 border-cyan-500"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<!-- Policy Impact -->
+		<section class="py-20 bg-gradient-to-br from-gray-50 to-amber-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+						Policy & Government Impact
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Our research directly influences government policy and federal AI initiatives
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+					<div>
+						<h3 class="text-2xl font-bold text-gray-900 mb-6">Federal AI Leadership</h3>
+						<div class="space-y-6">
+							<div class="flex items-start space-x-4">
+								<div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H9m0 0H7m2 0v-6a2 2 0 012-2h2a2 2 0 012 2v6m-6 0a2 2 0 001-1.73l3-5.2a2 2 0 011.73-1h0a2 2 0 011.73 1l3 5.2a2 2 0 001 1.73H19"/>
+									</svg>
+								</div>
+								<div>
+									<h4 class="text-lg font-semibold text-gray-900 mb-2">U.S. Senate AI Caucus</h4>
+									<p class="text-gray-600">Jules White briefed bipartisan Senate staff on AI's impact in higher education, directly informing federal AI policy discussions.</p>
+								</div>
+							</div>
+
+							<div class="flex items-start space-x-4">
+								<div class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+									</svg>
+								</div>
+								<div>
+									<h4 class="text-lg font-semibold text-gray-900 mb-2">Federal AI Credentials</h4>
+									<p class="text-gray-600">The U.S. Federal Acquisition Institute launched official AI Prompt Engineering credentials incorporating Vanderbilt's course content for federal employees.</p>
+								</div>
+							</div>
+
+							<div class="flex items-start space-x-4">
+								<div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
+									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+									</svg>
+								</div>
+								<div>
+									<h4 class="text-lg font-semibold text-gray-900 mb-2">Higher Education Standards</h4>
+									<p class="text-gray-600">Collaborating with organizations like ACE and EDUCAUSE to establish institutional AI guidelines and best practices nationwide.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="relative">
+						<div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 text-center">
+							<h4 class="text-2xl font-bold text-gray-900 mb-4">Policy Impact Metrics</h4>
+							<div class="space-y-4">
+								<div>
+									<div class="text-3xl font-bold text-blue-600">50+</div>
+									<div class="text-gray-700">Universities Seeking Guidance</div>
+								</div>
+								<div>
+									<div class="text-3xl font-bold text-green-600">1000s</div>
+									<div class="text-gray-700">Federal Employees Trained</div>
+								</div>
+								<div>
+									<div class="text-3xl font-bold text-purple-600">National</div>
+									<div class="text-gray-700">Standards Influence</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Speaking Engagements -->
+		<section class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+						Speaking & Keynotes
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						71+ keynote presentations reaching thousands of technologists, executives, and policymakers worldwide
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+					<div class="text-center group">
+						<div class="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H9m0 0H7m2 0v-6a2 2 0 012-2h2a2 2 0 012 2v6m-6 0a2 2 0 001-1.73l3-5.2a2 2 0 011.73-1h0a2 2 0 011.73 1l3 5.2a2 2 0 001 1.73H19"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-2">Meta</h3>
+						<p class="text-gray-600">Keynote on AI innovation reaching thousands of engineers and product managers</p>
+					</div>
+
+					<div class="text-center group">
+						<div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-2">Qualcomm</h3>
+						<p class="text-gray-600">Global AI Day keynote reaching 7,000+ employees worldwide</p>
+					</div>
+
+					<div class="text-center group">
+						<div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-2">Wells Fargo</h3>
+						<p class="text-gray-600">Featured keynote at Data Conference for financial industry leaders</p>
+					</div>
+
+					<div class="text-center group">
+						<div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H9m0 0H7m2 0v-6a2 2 0 012-2h2a2 2 0 012 2v6m-6 0a2 2 0 001-1.73l3-5.2a2 2 0 011.73-1h0a2 2 0 011.73 1l3 5.2a2 2 0 001 1.73H19"/>
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-2">Government</h3>
+						<p class="text-gray-600">Capitol Hill briefings and federal agency presentations on AI policy</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Call to Action -->
+		<section class="py-20 bg-gradient-to-r from-amber-500 to-orange-500">
+			<div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+					Join the Conversation
+				</h2>
+				<p class="text-xl text-amber-100 mb-8">
+					Follow our latest research, media appearances, and thought leadership as we continue to shape the future of augmented intelligence.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-200">
+						Speaking Inquiries
+					</a>
+					<a href="/research" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-200">
+						Explore Research
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
