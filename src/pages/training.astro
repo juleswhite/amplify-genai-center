@@ -3,270 +3,403 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Footer from '../components/Footer.astro';
-import Card from '../components/Card.astro';
 ---
 
-<Layout title="Training Programs | Amplified Generative AI Innovation Center">
+<Layout title="Training & Education | Amplified Generative AI Innovation Center">
 	<Header />
 	
 	<main class="pt-16 lg:pt-20">
 		<Hero 
-			title="Training 700,000+ Professionals Globally"
-			subtitle="World-Leading AI Education Programs"
-			description="Our Coursera partnership has trained over 700,000 professionals across 100+ countries, with 1,000+ companies including Apple, Google, Microsoft, and Walmart using our courses for workforce development."
-			ctaText="Join 700K+ Learners"
-			ctaLink="/contact"
-			secondaryCtaText="View Course Catalog"
-			secondaryCtaLink="#programs"
+			title="Transform Your Career with AI"
+			subtitle="World-Class Training & Education"
+			description="Join 700,000+ professionals worldwide who have advanced their careers through our groundbreaking generative AI and prompt engineering courses. Learn from the researchers who are defining the future of human-AI collaboration."
+			ctaText="Explore Courses"
+			ctaLink="#courses"
+			secondaryCtaText="Corporate Training"
+			secondaryCtaLink="#corporate"
 		/>
 
-		<!-- Training Programs -->
-		<section id="programs" class="py-20 bg-gradient-to-br from-gray-50 to-amber-50">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-16">
-					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-						Our Training Programs
-					</h2>
-					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
-						From foundational concepts to advanced applications, our programs are designed for learners at every level
-					</p>
-				</div>
-
-				<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-					<Card 
-						title="Executive AI Leadership"
-						description="Strategic program for executives and decision-makers on implementing AI while maintaining human-centered values and ethical practices."
-						tag="Executive Education"
-						className="border-2 border-amber-200"
-					>
-						<div class="px-6 pb-6 pt-0">
-							<div class="flex items-center justify-between mb-4">
-								<span class="text-sm font-medium text-gray-700">Duration: 3 days</span>
-								<span class="px-3 py-1 bg-amber-100 text-amber-800 text-sm rounded-full">Certificate</span>
-							</div>
-							<ul class="text-sm text-gray-600 space-y-1 mb-4">
-								<li>• AI Strategy & Implementation</li>
-								<li>• Ethical AI Frameworks</li>
-								<li>• Change Management</li>
-								<li>• ROI Assessment</li>
-							</ul>
-							<a href="/contact" class="inline-flex items-center text-amber-600 font-medium hover:text-amber-700 transition-colors">
-								Learn More →
-							</a>
-						</div>
-					</Card>
-
-					<Card 
-						title="AI Developer Bootcamp"
-						description="Intensive technical program for developers and engineers focusing on building AI systems that amplify human capabilities."
-						tag="Technical Training"
-						className="border-2 border-blue-200"
-					>
-						<div class="px-6 pb-6 pt-0">
-							<div class="flex items-center justify-between mb-4">
-								<span class="text-sm font-medium text-gray-700">Duration: 8 weeks</span>
-								<span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Certificate</span>
-							</div>
-							<ul class="text-sm text-gray-600 space-y-1 mb-4">
-								<li>• Human-AI Interface Design</li>
-								<li>• Explainable AI Development</li>
-								<li>• Bias Detection & Mitigation</li>
-								<li>• Production AI Systems</li>
-							</ul>
-							<a href="/contact" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors">
-								Learn More →
-							</a>
-						</div>
-					</Card>
-
-					<Card 
-						title="Educator AI Workshop"
-						description="Professional development for educators on integrating AI tools while maintaining the human connection essential to effective teaching."
-						tag="Education"
-						className="border-2 border-green-200"
-					>
-						<div class="px-6 pb-6 pt-0">
-							<div class="flex items-center justify-between mb-4">
-								<span class="text-sm font-medium text-gray-700">Duration: 2 days</span>
-								<span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">Workshop</span>
-							</div>
-							<ul class="text-sm text-gray-600 space-y-1 mb-4">
-								<li>• AI-Enhanced Pedagogy</li>
-								<li>• Personalized Learning</li>
-								<li>• Assessment Tools</li>
-								<li>• Digital Citizenship</li>
-							</ul>
-							<a href="/contact" class="inline-flex items-center text-green-600 font-medium hover:text-green-700 transition-colors">
-								Learn More →
-							</a>
-						</div>
-					</Card>
-				</div>
-			</div>
-		</section>
-
-		<!-- Student Programs -->
+		<!-- Impact Stats -->
 		<section class="py-20 bg-white">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="text-center mb-16">
 					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-						Student Programs
+						Global Training Impact
 					</h2>
 					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
-						Comprehensive academic programs and research opportunities for the next generation of AI researchers
+						Our training programs are transforming careers and organizations across 100+ countries
 					</p>
 				</div>
 
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-					<div>
-						<h3 class="text-2xl font-bold text-gray-900 mb-6">Graduate Research</h3>
-						<div class="space-y-6">
-							<div class="flex items-start space-x-4">
-								<div class="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-									</svg>
-								</div>
-								<div>
-									<h4 class="text-lg font-semibold text-gray-900 mb-2">PhD Research Fellowships</h4>
-									<p class="text-gray-600">Full funding for doctoral research in augmented intelligence, human-AI collaboration, and ethical AI development.</p>
-								</div>
-							</div>
-
-							<div class="flex items-start space-x-4">
-								<div class="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-									</svg>
-								</div>
-								<div>
-									<h4 class="text-lg font-semibold text-gray-900 mb-2">Masters Thesis Support</h4>
-									<p class="text-gray-600">Mentorship and resources for masters students conducting research in AI ethics, human-computer interaction, and more.</p>
-								</div>
-							</div>
-
-							<div class="flex items-start space-x-4">
-								<div class="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-									</svg>
-								</div>
-								<div>
-									<h4 class="text-lg font-semibold text-gray-900 mb-2">Interdisciplinary Collaboration</h4>
-									<p class="text-gray-600">Cross-departmental research opportunities spanning computer science, psychology, ethics, and design.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div>
-						<h3 class="text-2xl font-bold text-gray-900 mb-6">Undergraduate Opportunities</h3>
-						<div class="space-y-6">
-							<div class="flex items-start space-x-4">
-								<div class="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-									</svg>
-								</div>
-								<div>
-									<h4 class="text-lg font-semibold text-gray-900 mb-2">Research Assistant Positions</h4>
-									<p class="text-gray-600">Hands-on research experience working directly with faculty on cutting-edge AI projects.</p>
-								</div>
-							</div>
-
-							<div class="flex items-start space-x-4">
-								<div class="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-									</svg>
-								</div>
-								<div>
-									<h4 class="text-lg font-semibold text-gray-900 mb-2">Summer Research Program</h4>
-									<p class="text-gray-600">Intensive 10-week summer research program with stipend and mentorship from faculty and graduate students.</p>
-								</div>
-							</div>
-
-							<div class="flex items-start space-x-4">
-								<div class="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-									<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-									</svg>
-								</div>
-								<div>
-									<h4 class="text-lg font-semibold text-gray-900 mb-2">Capstone Projects</h4>
-									<p class="text-gray-600">Senior capstone projects in partnership with industry collaborators, focusing on real-world AI applications.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Industry Training -->
-		<section class="py-20 bg-gradient-to-br from-gray-50 to-amber-50">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-16">
-					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-						Industry Training & Consulting
-					</h2>
-					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
-						Customized training solutions for organizations looking to implement ethical AI practices
-					</p>
-				</div>
-
-				<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center">
-					<div class="bg-white p-8 rounded-xl shadow-lg">
-						<div class="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+					<div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl">
+						<div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
 							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
 							</svg>
 						</div>
-						<h3 class="text-xl font-bold text-gray-900 mb-4">Workforce Training</h3>
-						<p class="text-gray-600 mb-6">Help your teams understand and effectively work with AI tools while maintaining human expertise and judgment.</p>
-						<a href="/contact" class="text-amber-600 font-semibold hover:text-amber-700 transition-colors">Learn More →</a>
+						<div class="text-4xl font-bold text-blue-600 mb-2">700K+</div>
+						<div class="text-gray-700 font-medium">Professionals Trained</div>
+						<div class="text-sm text-gray-500 mt-2">Across 100+ countries</div>
 					</div>
 
-					<div class="bg-white p-8 rounded-xl shadow-lg">
-						<div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+					<div class="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl">
+						<div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
 							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H9m0 0H7m2 0v-6a2 2 0 012-2h2a2 2 0 012 2v6m-6 0a2 2 0 001-1.73l3-5.2a2 2 0 011.73-1h0a2 2 0 011.73 1l3 5.2a2 2 0 001 1.73H19"/>
 							</svg>
 						</div>
-						<h3 class="text-xl font-bold text-gray-900 mb-4">Ethics & Governance</h3>
-						<p class="text-gray-600 mb-6">Develop comprehensive AI governance frameworks, ethical guidelines, and bias mitigation strategies for your organization.</p>
-						<a href="/contact" class="text-blue-600 font-semibold hover:text-blue-700 transition-colors">Learn More →</a>
+						<div class="text-4xl font-bold text-green-600 mb-2">1,000+</div>
+						<div class="text-gray-700 font-medium">Companies</div>
+						<div class="text-sm text-gray-500 mt-2">Using our courses</div>
 					</div>
 
-					<div class="bg-white p-8 rounded-xl shadow-lg">
-						<div class="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
+					<div class="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl">
+						<div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
 							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
 							</svg>
 						</div>
-						<h3 class="text-xl font-bold text-gray-900 mb-4">Innovation Strategy</h3>
-						<p class="text-gray-600 mb-6">Strategic consulting on implementing AI innovations that amplify human capabilities and drive business value.</p>
-						<a href="/contact" class="text-green-600 font-semibold hover:text-green-700 transition-colors">Learn More →</a>
+						<div class="text-4xl font-bold text-purple-600 mb-2">Federal</div>
+						<div class="text-gray-700 font-medium">Certification</div>
+						<div class="text-sm text-gray-500 mt-2">Official U.S. credentials</div>
+					</div>
+
+					<div class="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-xl">
+						<div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+							</svg>
+						</div>
+						<div class="text-4xl font-bold text-amber-600 mb-2">18</div>
+						<div class="text-gray-700 font-medium">Months</div>
+						<div class="text-sm text-gray-500 mt-2">To 700K+ learners</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Call to Action -->
-		<section class="py-20 bg-gradient-to-r from-amber-500 to-orange-500">
-			<div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-				<h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-					Ready to Start Your AI Journey?
-				</h2>
-				<p class="text-xl text-amber-100 mb-8">
-					Whether you're a student, professional, or organization, we have training programs designed to help you succeed in the age of augmented intelligence.
-				</p>
-				<div class="flex flex-col sm:flex-row gap-4 justify-center">
-					<a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-200">
-						Apply Today
-					</a>
-					<a href="/research" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-200">
-						Explore Research
+		<!-- Featured Courses -->
+		<section id="courses" class="py-20 bg-gradient-to-br from-gray-50 to-amber-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+						World-Class AI Courses
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Learn from the researchers who are defining the field. Our courses combine cutting-edge research with practical application.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+					<!-- Prompt Engineering Course -->
+					<div class="bg-white rounded-2xl shadow-xl p-8">
+						<div class="flex items-center mb-6">
+							<div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mr-6">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-2xl font-bold text-gray-900">Prompt Engineering for ChatGPT</h3>
+								<p class="text-blue-600 font-medium">Most Popular Course</p>
+							</div>
+						</div>
+						<p class="text-gray-600 mb-6 leading-relaxed">
+							Master the art and science of prompt engineering with the foundational course that launched 700,000+ careers. Learn from the creators of the Prompt Pattern Catalog (1,500+ citations).
+						</p>
+						<div class="space-y-3 mb-8">
+							<div class="flex items-center space-x-3">
+								<svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+								</svg>
+								<span class="text-gray-700">Complete prompt pattern framework</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+								</svg>
+								<span class="text-gray-700">Real-world case studies</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+								</svg>
+								<span class="text-gray-700">Industry-recognized certification</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+								</svg>
+								<span class="text-gray-700">Used by Fortune 500 companies</span>
+							</div>
+						</div>
+						<div class="flex items-center justify-between">
+							<div>
+								<div class="text-2xl font-bold text-gray-900">500K+</div>
+								<div class="text-sm text-gray-600">Learners enrolled</div>
+							</div>
+							<a href="https://www.coursera.org/learn/prompt-engineering" target="_blank" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+								Enroll Now
+							</a>
+						</div>
+					</div>
+
+					<!-- Generative AI Course -->
+					<div class="bg-white rounded-2xl shadow-xl p-8">
+						<div class="flex items-center mb-6">
+							<div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mr-6">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+								</svg>
+							</div>
+							<div>
+								<h3 class="text-2xl font-bold text-gray-900">Introduction to Generative AI</h3>
+								<p class="text-green-600 font-medium">Comprehensive Foundation</p>
+							</div>
+						</div>
+						<p class="text-gray-600 mb-6 leading-relaxed">
+							Build a comprehensive understanding of generative AI technologies, applications, and implications. Perfect for professionals entering the AI space.
+						</p>
+						<div class="space-y-3 mb-8">
+							<div class="flex items-center space-x-3">
+								<svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+								</svg>
+								<span class="text-gray-700">Foundational AI concepts</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+								</svg>
+								<span class="text-gray-700">Ethical AI considerations</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+								</svg>
+								<span class="text-gray-700">Hands-on applications</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+								</svg>
+								<span class="text-gray-700">Industry best practices</span>
+							</div>
+						</div>
+						<div class="flex items-center justify-between">
+							<div>
+								<div class="text-2xl font-bold text-gray-900">200K+</div>
+								<div class="text-sm text-gray-600">Learners enrolled</div>
+							</div>
+							<a href="https://www.coursera.org/learn/introduction-to-generative-ai" target="_blank" class="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
+								Enroll Now
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Success Stories -->
+				<div class="bg-white rounded-2xl shadow-xl p-8">
+					<h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Learner Success Story</h3>
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+						<div>
+							<div class="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-xl border-l-4 border-blue-500">
+								<div class="flex items-center mb-6">
+									<div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+										<span class="text-white font-bold text-sm">SK</span>
+									</div>
+									<div>
+										<h3 class="font-bold text-gray-900">Shawn Keen</h3>
+										<p class="text-blue-600">Accessibility Advocate & AI Professional</p>
+									</div>
+								</div>
+								<blockquote class="text-gray-700 italic mb-4">
+									"The course opened up entirely new creative possibilities for me. AI has become an incredible tool for amplifying what I can achieve, regardless of my visual impairment."
+								</blockquote>
+								<p class="text-gray-600">
+									Shawn, who is blind, leveraged our Prompt Engineering course to gain new career skills and unlock creative possibilities, demonstrating that our approach to augmented intelligence creates opportunities for everyone.
+								</p>
+							</div>
+						</div>
+
+						<div class="space-y-6">
+							<div class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl">
+								<h4 class="font-bold text-gray-900 mb-2">Fortune 500 Impact</h4>
+								<p class="text-gray-600">
+									A major chemical manufacturer used our courses to train 80% of their IT workforce, with 200 employees earning advanced AI badges.
+								</p>
+							</div>
+
+							<div class="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-xl">
+								<h4 class="font-bold text-gray-900 mb-2">Government Adoption</h4>
+								<p class="text-gray-600">
+									The U.S. Federal Acquisition Institute created official AI credentials for federal employees using our content.
+								</p>
+							</div>
+
+							<div class="bg-gradient-to-r from-amber-50 to-orange-50 p-6 rounded-xl">
+								<h4 class="font-bold text-gray-900 mb-2">Global Reach</h4>
+								<p class="text-gray-600">
+									Over 1,000 companies worldwide are using our courses to upskill their workforce across all industries.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Corporate Training -->
+		<section id="corporate" class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+						Corporate Training Solutions
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Transform your workforce with AI skills that drive real business results. Trusted by 1,000+ companies worldwide.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+					<div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl">
+						<h3 class="text-2xl font-bold text-gray-900 mb-6">Enterprise Training Programs</h3>
+						<div class="space-y-4 mb-8">
+							<div class="flex items-start space-x-4">
+								<div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+									<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+									</svg>
+								</div>
+								<div>
+									<h4 class="font-semibold text-gray-900">Customized Curriculum</h4>
+									<p class="text-gray-600">Tailored training programs designed for your industry and specific use cases</p>
+								</div>
+							</div>
+							<div class="flex items-start space-x-4">
+								<div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+									<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+									</svg>
+								</div>
+								<div>
+									<h4 class="font-semibold text-gray-900">Executive Briefings</h4>
+									<p class="text-gray-600">Leadership sessions on AI strategy and workforce transformation</p>
+								</div>
+							</div>
+							<div class="flex items-start space-x-4">
+								<div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+									<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+									</svg>
+								</div>
+								<div>
+									<h4 class="font-semibold text-gray-900">Ongoing Support</h4>
+									<p class="text-gray-600">Continuous guidance and updates as AI technologies evolve</p>
+								</div>
+							</div>
+						</div>
+						<a href="/contact" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+							Request Enterprise Demo
+						</a>
+					</div>
+
+					<div class="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl">
+						<h3 class="text-2xl font-bold text-gray-900 mb-6">Proven Results</h3>
+						<div class="grid grid-cols-2 gap-6 mb-8">
+							<div class="text-center">
+								<div class="text-3xl font-bold text-blue-600 mb-2">80%</div>
+								<div class="text-gray-700">Workforce Certification Rate</div>
+							</div>
+							<div class="text-center">
+								<div class="text-3xl font-bold text-green-600 mb-2">200</div>
+								<div class="text-gray-700">Advanced Badge Holders</div>
+							</div>
+							<div class="text-center">
+								<div class="text-3xl font-bold text-purple-600 mb-2">1,000+</div>
+								<div class="text-gray-700">Companies Served</div>
+							</div>
+							<div class="text-center">
+								<div class="text-3xl font-bold text-amber-600 mb-2">100+</div>
+								<div class="text-gray-700">Countries Reached</div>
+							</div>
+						</div>
+						<p class="text-gray-600 mb-6">
+							Our corporate training programs deliver measurable ROI through improved productivity, faster innovation cycles, and enhanced competitive positioning in the AI-driven marketplace.
+						</p>
+						<a href="https://www.coursera.org/vanderbilt" target="_blank" class="inline-flex items-center px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
+							Browse Course Catalog
+						</a>
+					</div>
+				</div>
+
+				<div class="text-center">
+					<div class="bg-gradient-to-r from-amber-400 to-orange-500 text-white p-8 rounded-xl">
+						<h3 class="text-2xl font-bold mb-4">Ready to Transform Your Workforce?</h3>
+						<p class="text-amber-100 mb-6">Join the 1,000+ companies already using our training to build AI-ready teams</p>
+						<div class="flex flex-col sm:flex-row gap-4 justify-center">
+							<a href="/contact" class="inline-flex items-center px-8 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+								Schedule Consultation
+							</a>
+							<a href="mailto:training@amplify.vanderbilt.edu" class="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-colors">
+								Get Custom Quote
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Learning Path -->
+		<section class="py-20 bg-gradient-to-br from-gray-50 to-amber-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+						Your AI Learning Journey
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Whether you're just starting or looking to advance your AI expertise, we have the right path for you
+					</p>
+				</div>
+
+				<div class="relative">
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+						<div class="bg-white p-8 rounded-xl text-center shadow-lg">
+							<div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+								<span class="text-white font-bold text-xl">1</span>
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-4">Foundation</h3>
+							<p class="text-gray-600 mb-6">Start with Introduction to Generative AI to build core understanding and explore potential applications in your field.</p>
+							<div class="text-sm text-blue-600 font-medium">2-3 weeks • Beginner</div>
+						</div>
+
+						<div class="bg-white p-8 rounded-xl text-center shadow-lg">
+							<div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
+								<span class="text-white font-bold text-xl">2</span>
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-4">Specialization</h3>
+							<p class="text-gray-600 mb-6">Master Prompt Engineering to unlock the full potential of AI tools and become highly productive with AI assistance.</p>
+							<div class="text-sm text-green-600 font-medium">4-6 weeks • Intermediate</div>
+						</div>
+
+						<div class="bg-white p-8 rounded-xl text-center shadow-lg">
+							<div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+								<span class="text-white font-bold text-xl">3</span>
+							</div>
+							<h3 class="text-xl font-bold text-gray-900 mb-4">Leadership</h3>
+							<p class="text-gray-600 mb-6">Apply skills to transform your team and organization, implementing AI strategies that drive business results.</p>
+							<div class="text-sm text-purple-600 font-medium">Ongoing • Advanced</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-center mt-12">
+					<a href="https://www.coursera.org/vanderbilt" target="_blank" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
+						<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+						</svg>
+						Start Your Journey Today
 					</a>
 				</div>
 			</div>

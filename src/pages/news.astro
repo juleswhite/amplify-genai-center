@@ -1,0 +1,379 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="News & Updates | Amplified Generative AI Innovation Center">
+	<Header />
+	
+	<main class="pt-16 lg:pt-20">
+		<Hero 
+			title="Latest News & Updates"
+			subtitle="Breaking Developments"
+			description="Stay current with groundbreaking research, major announcements, media coverage, and the latest developments from the Amplified Generative AI Innovation Center."
+			ctaText="Subscribe to Updates"
+			ctaLink="/contact"
+			secondaryCtaText="Media Inquiries"
+			secondaryCtaLink="/contact"
+		/>
+
+		<!-- Breaking News -->
+		<section class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-500 p-8 rounded-lg mb-12">
+					<div class="flex items-start space-x-4">
+						<div class="w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0">
+							<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+							</svg>
+						</div>
+						<div>
+							<h3 class="text-xl font-bold text-gray-900 mb-2">🎉 Milestone Achievement: 700,000+ Professionals Trained</h3>
+							<p class="text-gray-700 mb-2">December 2024</p>
+							<p class="text-gray-600">Our Coursera partnership has reached an incredible milestone, training over 700,000 professionals worldwide across 100+ countries in generative AI and prompt engineering skills.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Recent News & Announcements</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Major developments, research breakthroughs, and recognition from the global AI community
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+					<!-- Major News Items -->
+					<Card 
+						title="U.S. Senate AI Caucus Briefing"
+						description="Jules White briefed bipartisan Senate staff on AI's impact in higher education, directly informing federal AI policy discussions on Capitol Hill."
+						image="/images/senate-briefing.jpg"
+						tag="Government Relations"
+						date="May 2024"
+						link="/news/senate-briefing"
+						className="border-t-4 border-blue-500"
+					/>
+
+					<Card 
+						title="Federal AI Credentials Launch"
+						description="The U.S. Federal Acquisition Institute launched official AI Prompt Engineering credentials for federal employees, incorporating Vanderbilt's course content."
+						image="/images/federal-credentials.jpg"
+						tag="Policy Impact"
+						date="September 2024"
+						link="/news/federal-credentials"
+						className="border-t-4 border-green-500"
+					/>
+
+					<Card 
+						title="Prompt Pattern Research Reaches 1,500+ Citations"
+						description="The groundbreaking Prompt Pattern Catalog paper has achieved over 1,500 academic citations, establishing it as foundational research in the field."
+						image="/images/research-citations.jpg"
+						tag="Research Excellence"
+						date="November 2024"
+						link="/research/prompt-patterns"
+						className="border-t-4 border-purple-500"
+					/>
+
+					<Card 
+						title="TIME Magazine Op-Ed: AI Censorship"
+						description="Jules White co-authored a thought-provoking piece examining how AI could both enable and curb online censorship, advocating for balanced governance."
+						image="/images/time-magazine.jpg"
+						tag="Thought Leadership"
+						date="February 2024"
+						link="https://time.com/6835213/the-future-of-censorship-is-ai-generated/"
+						className="border-t-4 border-red-500"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<!-- Media Coverage -->
+		<section class="py-20 bg-gradient-to-br from-gray-50 to-amber-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">In the Media</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Major media outlets covering our research and insights on augmented intelligence
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<div class="bg-white p-6 rounded-xl shadow-lg">
+						<div class="flex items-center mb-4">
+							<div class="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
+								<span class="text-white font-bold text-sm">WSJ</span>
+							</div>
+							<div>
+								<h3 class="font-bold text-gray-900">Wall Street Journal</h3>
+								<p class="text-sm text-gray-600">Profile Feature</p>
+							</div>
+						</div>
+						<p class="text-gray-600 mb-4">"The future is not artificial intelligence, it's augmented intelligence—where we augment and amplify what people can do."</p>
+						<span class="text-xs text-gray-500">Featured Quote</span>
+					</div>
+
+					<div class="bg-white p-6 rounded-xl shadow-lg">
+						<div class="flex items-center mb-4">
+							<div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4">
+								<span class="text-white font-bold text-xs">GUARD</span>
+							</div>
+							<div>
+								<h3 class="font-bold text-gray-900">The Guardian</h3>
+								<p class="text-sm text-gray-600">Technology Section</p>
+							</div>
+						</div>
+						<p class="text-gray-600 mb-4">Expert commentary on teaching children AI responsibility and avoiding "intellectual laziness" while embracing educational potential.</p>
+						<span class="text-xs text-gray-500">Expert Interview</span>
+					</div>
+
+					<div class="bg-white p-6 rounded-xl shadow-lg">
+						<div class="flex items-center mb-4">
+							<div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">
+								<span class="text-white font-bold text-xs">CNN</span>
+							</div>
+							<div>
+								<h3 class="font-bold text-gray-900">CNN</h3>
+								<p class="text-sm text-gray-600">AI in Education</p>
+							</div>
+						</div>
+						<p class="text-gray-600 mb-4">Coverage of Vanderbilt's proactive approach to AI integration in higher education as a model for other institutions.</p>
+						<span class="text-xs text-gray-500">University Feature</span>
+					</div>
+
+					<div class="bg-white p-6 rounded-xl shadow-lg">
+						<div class="flex items-center mb-4">
+							<div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center mr-4">
+								<span class="text-white font-bold text-xs">NPR</span>
+							</div>
+							<div>
+								<h3 class="font-bold text-gray-900">NPR Marketplace</h3>
+								<p class="text-sm text-gray-600">Education Policy</p>
+							</div>
+						</div>
+						<p class="text-gray-600 mb-4">Featured discussion on adapting academic integrity policies for the generative AI era, showcasing Vanderbilt's leadership.</p>
+						<span class="text-xs text-gray-500">Policy Discussion</span>
+					</div>
+
+					<div class="bg-white p-6 rounded-xl shadow-lg">
+						<div class="flex items-center mb-4">
+							<div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-lg flex items-center justify-center mr-4">
+								<span class="text-white font-bold text-xs">BLOOM</span>
+							</div>
+							<div>
+								<h3 class="font-bold text-gray-900">Bloomberg</h3>
+								<p class="text-sm text-gray-600">Technology News</p>
+							</div>
+						</div>
+						<p class="text-gray-600 mb-4">Praise for Vanderbilt's "rapid response" to integrate AI in curricula, turning potential challenges into leadership opportunities.</p>
+						<span class="text-xs text-gray-500">Innovation Coverage</span>
+					</div>
+
+					<div class="bg-white p-6 rounded-xl shadow-lg">
+						<div class="flex items-center mb-4">
+							<div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mr-4">
+								<span class="text-white font-bold text-xs">CHE</span>
+							</div>
+							<div>
+								<h3 class="font-bold text-gray-900">Chronicle of Higher Ed</h3>
+								<p class="text-sm text-gray-600">Higher Education</p>
+							</div>
+						</div>
+						<p class="text-gray-600 mb-4">Coverage of the Amplify platform's adoption across 40+ institutions and its impact on higher education AI strategies.</p>
+						<span class="text-xs text-gray-500">Platform Innovation</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Research Updates -->
+		<section class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Research & Publications</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Latest research breakthroughs and academic publications shaping the field
+					</p>
+				</div>
+
+				<div class="space-y-8">
+					<div class="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-xl">
+						<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+							<div class="lg:col-span-2">
+								<h3 class="text-2xl font-bold text-gray-900 mb-3">ChatGPT Prompt Patterns Book Chapter</h3>
+								<p class="text-purple-600 font-medium mb-3">300+ Citations in Months</p>
+								<p class="text-gray-600 leading-relaxed">
+									Our book chapter on ChatGPT prompt patterns for software engineering has achieved over 300 citations within months of publication, demonstrating rapid adoption in the developer community.
+								</p>
+							</div>
+							<div class="text-center">
+								<div class="text-4xl font-bold text-purple-600 mb-2">300+</div>
+								<div class="text-gray-700 font-medium">Rapid Citations</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-gradient-to-r from-green-50 to-emerald-50 p-8 rounded-xl">
+						<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+							<div class="lg:col-span-2">
+								<h3 class="text-2xl font-bold text-gray-900 mb-3">AI is Labor Framework</h3>
+								<p class="text-green-600 font-medium mb-3">Viral Social Media Impact</p>
+								<p class="text-gray-600 leading-relaxed">
+									The AI is Labor research post received over 1,000 reactions from university executives and tech leaders, sparking global conversation about workforce transformation.
+								</p>
+							</div>
+							<div class="text-center">
+								<div class="text-4xl font-bold text-green-600 mb-2">1,000+</div>
+								<div class="text-gray-700 font-medium">LinkedIn Reactions</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Speaking & Events -->
+		<section class="py-20 bg-gradient-to-br from-gray-50 to-amber-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Speaking Engagements & Events</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Recent keynotes and presentations reaching global audiences
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-500">
+						<h3 class="text-xl font-bold text-gray-900 mb-3">Meta Keynote</h3>
+						<p class="text-red-600 font-medium mb-3">Thousands of Engineers</p>
+						<p class="text-gray-600 mb-4">Keynote presentation on AI innovation reaching thousands of engineers and product managers at Meta.</p>
+						<span class="text-xs text-gray-500">Corporate Speaking</span>
+					</div>
+
+					<div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
+						<h3 class="text-xl font-bold text-gray-900 mb-3">Qualcomm Global AI Day</h3>
+						<p class="text-blue-600 font-medium mb-3">7,000+ Employees Worldwide</p>
+						<p class="text-gray-600 mb-4">Global keynote reaching over 7,000 Qualcomm employees worldwide, equipping a major semiconductor workforce with AI insights.</p>
+						<span class="text-xs text-gray-500">Industry Leadership</span>
+					</div>
+
+					<div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-500">
+						<h3 class="text-xl font-bold text-gray-900 mb-3">Wells Fargo Data Conference</h3>
+						<p class="text-green-600 font-medium mb-3">Financial Industry Leaders</p>
+						<p class="text-gray-600 mb-4">Featured keynote addressing financial industry leaders on AI transformation and data strategies.</p>
+						<span class="text-xs text-gray-500">Financial Sector</span>
+					</div>
+				</div>
+
+				<div class="text-center mt-12">
+					<div class="bg-gradient-to-r from-amber-400 to-orange-500 text-white p-8 rounded-xl">
+						<h3 class="text-2xl font-bold mb-4">71+ Keynote Presentations in 2024</h3>
+						<p class="text-amber-100 mb-6">Reaching thousands of technologists, executives, and policymakers worldwide</p>
+						<a href="/contact" class="inline-flex items-center px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+							Speaking Inquiries
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Platform Updates -->
+		<section class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Platform & Technology Updates</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Latest developments in our AI platforms and technological innovations
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+					<div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl">
+						<h3 class="text-2xl font-bold text-gray-900 mb-4">Amplify Platform Expansion</h3>
+						<p class="text-blue-600 font-medium mb-4">40+ Institutions Adopting</p>
+						<p class="text-gray-600 mb-6">
+							The Amplify Generative AI Platform has expanded beyond Vanderbilt, with over 40 institutions now piloting or deploying the platform for their communities.
+						</p>
+						<div class="space-y-3">
+							<div class="flex items-center space-x-3">
+								<svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+								</svg>
+								<span class="text-gray-700">7,000+ Vanderbilt users onboarded</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+								</svg>
+								<span class="text-gray-700">$10-30M in projected cost savings</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+								</svg>
+								<span class="text-gray-700">Open-source collaborative development</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl">
+						<h3 class="text-2xl font-bold text-gray-900 mb-4">Coursera Milestone</h3>
+						<p class="text-purple-600 font-medium mb-4">Approaching 1M Learners</p>
+						<p class="text-gray-600 mb-6">
+							Our Coursera partnership continues to grow exponentially, with plans to reach 1 million learners globally within the next 9 months.
+						</p>
+						<div class="space-y-3">
+							<div class="flex items-center space-x-3">
+								<svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+								</svg>
+								<span class="text-gray-700">700,000+ professionals already trained</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+								</svg>
+								<span class="text-gray-700">100+ countries represented</span>
+							</div>
+							<div class="flex items-center space-x-3">
+								<svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+								</svg>
+								<span class="text-gray-700">1,000+ companies using courses</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Newsletter Signup -->
+		<section class="py-20 bg-gradient-to-r from-amber-500 to-orange-500">
+			<div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+					Stay Updated
+				</h2>
+				<p class="text-xl text-amber-100 mb-8">
+					Subscribe to receive the latest news, research updates, and insights from the Amplified Generative AI Innovation Center.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+					<input 
+						type="email" 
+						placeholder="Enter your email" 
+						class="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+					/>
+					<button class="px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+						Subscribe
+					</button>
+				</div>
+				<p class="text-amber-100 text-sm mt-4">
+					Join thousands of professionals staying current with AI innovation
+				</p>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
