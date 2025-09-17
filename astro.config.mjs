@@ -10,7 +10,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://juleswhite.github.io',
-  base: '/majk_amplify_center_website_f9566587',
+  base: '/amplify-genai-center',
   vite: {
     plugins: [tailwindcss()]
   },
