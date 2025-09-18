@@ -3,10 +3,10 @@ title: "Explainable AI for Healthcare"
 description: "Creating transparent AI diagnostic tools that provide clear explanations for their recommendations, enabling healthcare professionals to make informed decisions."
 category: "Healthcare AI"
 status: "Active"
-PI: "Dr. Lisa Johnson"
-collaborators: ["Dr. Jules White", "Dr. Sarah Chen", "Medical Advisory Board"]
+PI: "Dr. Jules White"
+collaborators: ["Healthcare Research Team"]
 startDate: 2023-05-01
-funding: "NIH Grant #R01-MD-7890 - $4.5M"
+funding: "Healthcare AI Research Initiative"
 tags: ["Medical Diagnosis", "Transparency", "Trust", "Clinical Decision Support"]
 image: "/images/explainable-ai-health.jpg"
 heroImage: "/images/hero-explainable-healthcare.jpg"

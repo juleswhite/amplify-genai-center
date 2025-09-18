@@ -3,10 +3,10 @@ title: "Augmented Decision Making Systems"
 description: "Research into AI systems that enhance human decision-making processes without replacing human judgment. Focus on high-stakes environments like healthcare and finance."
 category: "Cognitive Enhancement"
 status: "Active"
-PI: "Dr. Sarah Chen"
-collaborators: ["Dr. Jules White", "Dr. Lisa Johnson"]
+PI: "Dr. Jules White"
+collaborators: ["Research Team"]
 startDate: 2023-03-01
-funding: "NIH Grant #R01-AI-4567 - $3.2M"
+funding: "Research Initiative"
 tags: ["Decision Support", "Healthcare", "Risk Assessment", "Human-AI Collaboration"]
 image: "/images/augmented-decisions.jpg"
 heroImage: "/images/hero-augmented-decisions.jpg"

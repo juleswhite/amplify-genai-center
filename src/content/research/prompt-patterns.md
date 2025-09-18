@@ -4,9 +4,9 @@ description: "A comprehensive collection of proven prompt engineering patterns f
 category: "AI Engineering"
 status: "Active"
 PI: "Dr. Jules White"
-collaborators: ["Dr. Sarah Chen", "Research Team"]
+collaborators: ["Research Team"]
 startDate: 2022-06-01
-funding: "Industry Partnership - $1.8M"
+funding: "Research Initiative"
 tags: ["Prompt Engineering", "Human-AI Interaction", "Software Engineering", "Best Practices"]
 image: "/images/prompt-patterns.jpg"
 heroImage: "/images/hero-prompt-patterns.jpg"

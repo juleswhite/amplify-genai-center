@@ -4,9 +4,9 @@ description: "A comprehensive framework for organizations to integrate AI into t
 category: "Workforce Innovation"
 status: "Active"
 PI: "Dr. Jules White"
-collaborators: ["Dr. Sarah Chen", "Dr. Emma Thompson"]
+collaborators: ["Research Team"]
 startDate: 2023-01-15
-funding: "NSF Grant #2340891 - $2.3M"
+funding: "Research Initiative"
 tags: ["Future of Work", "Human-AI Collaboration", "Policy", "Workforce Transformation"]
 image: "/images/ai-labor-playbook.jpg"
 heroImage: "/images/hero-ai-labor.jpg"

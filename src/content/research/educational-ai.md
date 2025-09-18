@@ -3,10 +3,10 @@ title: "Educational AI Partners"
 description: "Developing AI systems that work alongside educators to personalize learning experiences while maintaining the essential human connection in teaching and mentorship."
 category: "EdTech Innovation"
 status: "Active"
-PI: "Dr. Michael Rodriguez"
-collaborators: ["Dr. Jules White", "Dr. Sarah Chen"]
+PI: "Dr. Jules White"
+collaborators: ["Educational Research Team"]
 startDate: 2022-09-01
-funding: "Department of Education Grant - $2.1M"
+funding: "Educational Research Initiative"
 tags: ["Personalized Learning", "Teacher Support", "Student Engagement", "AI Tutoring"]
 image: "/images/educational-ai.jpg"
 heroImage: "/images/hero-educational-ai.jpg"
