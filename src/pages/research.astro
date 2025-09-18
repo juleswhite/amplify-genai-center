@@ -4,158 +4,141 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Footer from '../components/Footer.astro';
 import Card from '../components/Card.astro';
+import { getCollection } from 'astro:content';
 
-// Research project data
-const researchProjects = [
-	{
-		id: 1,
-		title: "AI Labor Playbook",
-		description: "A comprehensive framework for organizations to integrate AI into their workforce while preserving human dignity and enhancing capabilities. This research addresses the critical challenges of AI adoption in the workplace.",
-		image: "/images/ai-labor-playbook.jpg",
-		category: "Workforce Innovation",
-		status: "Active",
-		PI: "Dr. Jules White",
-		link: "/research/ai-labor-playbook",
-		tags: ["Future of Work", "Human-AI Collaboration", "Policy"]
-	},
-	{
-		id: 2,
-		title: "Augmented Decision Making Systems",
-		description: "Research into AI systems that enhance human decision-making processes without replacing human judgment. Focus on high-stakes environments like healthcare and finance.",
-		image: "/images/augmented-decisions.jpg",
-		category: "Cognitive Enhancement",
-		status: "Active",
-		PI: "Dr. Sarah Chen",
-		link: "/research/augmented-decisions",
-		tags: ["Decision Support", "Healthcare", "Risk Assessment"]
-	},
-	{
-		id: 3,
-		title: "Educational AI Partners",
-		description: "Developing AI systems that work alongside educators to personalize learning experiences while maintaining the essential human connection in teaching and mentorship.",
-		image: "/images/educational-ai.jpg",
-		category: "EdTech Innovation",
-		status: "Active",
-		PI: "Dr. Michael Rodriguez",
-		link: "/research/educational-ai",
-		tags: ["Personalized Learning", "Teacher Support", "Student Engagement"]
-	},
-	{
-		id: 4,
-		title: "Explainable AI for Healthcare",
-		description: "Creating transparent AI diagnostic tools that provide clear explanations for their recommendations, enabling healthcare professionals to make informed decisions.",
-		image: "/images/explainable-ai-health.jpg",
-		category: "Healthcare AI",
-		status: "Active",
-		PI: "Dr. Lisa Johnson",
-		link: "/research/explainable-ai-healthcare",
-		tags: ["Medical Diagnosis", "Transparency", "Trust"]
-	},
-	{
-		id: 5,
-		title: "Human-AI Creative Collaboration",
-		description: "Exploring how AI can amplify human creativity in design, art, and innovation without diminishing the unique value of human creative expression.",
-		image: "/images/creative-ai.jpg",
-		category: "Creative Innovation",
-		status: "Active",
-		PI: "Dr. Alex Kim",
-		link: "/research/creative-collaboration",
-		tags: ["Design", "Art", "Innovation", "Creativity"]
-	},
-	{
-		id: 6,
-		title: "Ethical AI Development Framework",
-		description: "Developing comprehensive guidelines and tools for creating AI systems that align with human values and promote social good.",
-		image: "/images/ethical-ai.jpg",
-		category: "AI Ethics",
-		status: "Active",
-		PI: "Dr. Emma Thompson",
-		link: "/research/ethical-ai-framework",
-		tags: ["Ethics", "Bias", "Fairness", "Social Good"]
-	},
-	{
-		id: 7,
-		title: "AI-Enhanced Scientific Discovery",
-		description: "Accelerating scientific research through AI that helps generate hypotheses, design experiments, and identify patterns in complex datasets.",
-		image: "/images/scientific-ai.jpg",
-		category: "Scientific Research",
-		status: "Planning",
-		PI: "Dr. Robert Park",
-		link: "/research/scientific-discovery",
-		tags: ["Research Acceleration", "Data Analysis", "Hypothesis Generation"]
-	},
-	{
-		id: 8,
-		title: "Inclusive AI Interface Design",
-		description: "Creating AI interfaces that are accessible and intuitive for users with diverse abilities, backgrounds, and technical expertise.",
-		image: "/images/inclusive-ai.jpg",
-		category: "Accessibility",
-		status: "Planning",
-		PI: "Dr. Maria Gonzalez",
-		link: "/research/inclusive-ai-design",
-		tags: ["Accessibility", "UX Design", "Inclusive Design", "Usability"]
-	}
-];
+// Get all published research projects
+const researchProjects = await getCollection('research', ({ data }) => {
+	return data.published !== false;
+});
 
-const categories = ["All", "Workforce Innovation", "Cognitive Enhancement", "EdTech Innovation", "Healthcare AI", "Creative Innovation", "AI Ethics", "Scientific Research", "Accessibility"];
+// Sort by featured first, then by start date
+const sortedProjects = researchProjects.sort((a, b) => {
+	if (a.data.featured && !b.data.featured) return -1;
+	if (!a.data.featured && b.data.featured) return 1;
+	return new Date(b.data.startDate).getTime() - new Date(a.data.startDate).getTime();
+});
+
+// Get unique categories
+const categories = ["All", ...new Set(researchProjects.map(project => project.data.category))];
+
+// Transform research projects for display
+const displayProjects = sortedProjects.map((project, index) => ({
+	id: index + 1,
+	title: project.data.title,
+	description: project.data.description,
+	image: project.data.image || "/images/research-placeholder.jpg",
+	category: project.data.category,
+	status: project.data.status,
+	PI: project.data.PI,
+	link: `/research/${project.slug}`,
+	tags: project.data.tags,
+	featured: project.data.featured || false,
+	startDate: project.data.startDate,
+	funding: project.data.funding
+}));
 ---
 
 <Layout title="Research Projects | Amplified Generative AI Innovation Center">
 	<Header />
 	
 	<main class="pt-16 lg:pt-20">
-		<!-- Hero Section -->
 		<Hero 
-			title="Pioneering Research in Augmented Intelligence"
-			subtitle="Research & Innovation"
-			description="Our research focuses on developing AI systems that amplify human capabilities rather than replace them. Explore our groundbreaking projects that are shaping the future of human-AI collaboration."
-			ctaText="View Publications"
-			ctaLink="/thought-leadership"
-			secondaryCtaText="Join Our Research"
+			title="Advancing Augmented Intelligence Research"
+			subtitle="Pioneering Human-AI Collaboration"
+			description="Our research focuses on developing AI systems that amplify human capabilities rather than replace them. We're creating the frameworks, tools, and insights that will shape the future of human-AI collaboration across industries and applications."
+			ctaText="Explore Research"
+			ctaLink="#research-grid"
+			secondaryCtaText="Collaboration Opportunities"
 			secondaryCtaLink="/contact"
 		/>
 
-		<!-- Research Overview Stats -->
-		<section class="py-16 bg-white">
+		<!-- Research Impact Stats -->
+		<section class="py-20 bg-gradient-to-br from-gray-50 to-amber-50">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-					<div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl">
-						<div class="text-3xl font-bold text-blue-600 mb-2">1,500+</div>
-						<div class="text-gray-700 font-medium">Citations for Key Papers</div>
+				<div class="text-center mb-16">
+					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Research Impact</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+						Our research creates real-world impact through rigorous scientific investigation and practical application
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+					<div class="text-center">
+						<div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow duration-300">
+							<div class="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+								</svg>
+							</div>
+							<h3 class="text-4xl font-bold text-gray-900 mb-2">1,500+</h3>
+							<p class="text-gray-600 font-medium">Research Citations</p>
+							<p class="text-sm text-gray-500 mt-2">Academic impact across disciplines</p>
+						</div>
 					</div>
-					<div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl">
-						<div class="text-3xl font-bold text-green-600 mb-2">71+</div>
-						<div class="text-gray-700 font-medium">Keynote Presentations</div>
+
+					<div class="text-center">
+						<div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow duration-300">
+							<div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+								</svg>
+							</div>
+							<h3 class="text-4xl font-bold text-gray-900 mb-2">71+</h3>
+							<p class="text-gray-600 font-medium">Keynote Presentations</p>
+							<p class="text-sm text-gray-500 mt-2">Global conference impact</p>
+						</div>
 					</div>
-					<div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl">
-						<div class="text-3xl font-bold text-purple-600 mb-2">1,000+</div>
-						<div class="text-gray-700 font-medium">Corporate Partners</div>
+
+					<div class="text-center">
+						<div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow duration-300">
+							<div class="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+								</svg>
+							</div>
+							<h3 class="text-4xl font-bold text-gray-900 mb-2">1,000+</h3>
+							<p class="text-gray-600 font-medium">Corporate Partners</p>
+							<p class="text-sm text-gray-500 mt-2">Industry collaborations</p>
+						</div>
 					</div>
-					<div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl">
-						<div class="text-3xl font-bold text-amber-600 mb-2">$30M</div>
-						<div class="text-gray-700 font-medium">Cost Savings Generated</div>
+
+					<div class="text-center">
+						<div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow duration-300">
+							<div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+								<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+								</svg>
+							</div>
+							<h3 class="text-4xl font-bold text-gray-900 mb-2">$30M+</h3>
+							<p class="text-gray-600 font-medium">Cost Savings</p>
+							<p class="text-sm text-gray-500 mt-2">Documented organizational impact</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Research Projects -->
-		<section class="py-20 bg-gradient-to-br from-gray-50 to-amber-50">
+		<!-- Research Categories Filter -->
+		<section id="research-grid" class="py-20 bg-white">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="text-center mb-16">
 					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-						Current Research Projects
+						Active Research Projects
 					</h2>
 					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
-						Discover how we're advancing the field of augmented intelligence through innovative research and real-world applications
+						Explore our comprehensive portfolio of research initiatives advancing the science of human-AI collaboration
 					</p>
 				</div>
 
-				<!-- Filter Buttons -->
+				<!-- Category Filter -->
 				<div class="flex flex-wrap justify-center gap-2 mb-12" id="category-filters">
-					{categories.map((category, index) => (
+					{categories.map((category) => (
 						<button 
-							class={`filter-btn px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 hover:scale-105 border ${index === 0 ? 'bg-amber-500 text-white border-amber-500' : 'bg-white text-gray-700 hover:bg-gray-100 border-gray-200'}`}
+							class={`filter-btn px-6 py-3 rounded-full text-sm font-medium transition-all duration-200 ${
+								category === "All" 
+									? "bg-amber-500 text-white" 
+									: "bg-gray-100 text-gray-700 hover:bg-gray-200"
+							}`}
 							data-category={category}
 						>
 							{category}
@@ -163,111 +146,172 @@ const categories = ["All", "Workforce Innovation", "Cognitive Enhancement", "EdT
 					))}
 				</div>
 
-				<!-- Research Grid -->
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="research-grid">
-					{researchProjects.map((project) => (
-						<div class="research-card" data-category={project.category}>
-							<Card 
-								title={project.title}
-								description={project.description}
-								image={project.image}
-								tag={project.category}
-								link={project.link}
-								className="h-full"
-							>
-								<div slot="extra-content" class="px-6 pb-6 pt-0">
-									<div class="flex items-center justify-between mb-3">
-										<span class="text-sm font-medium text-gray-700">PI: {project.PI}</span>
-										<span class={`px-2 py-1 text-xs font-medium rounded-full ${
-											project.status === 'Active' 
-												? 'bg-green-100 text-green-800' 
-												: 'bg-yellow-100 text-yellow-800'
-										}`}>
-											{project.status}
-										</span>
-									</div>
-									<div class="flex flex-wrap gap-1">
-										{project.tags.map((tag) => (
-											<span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
-												{tag}
-											</span>
-										))}
+				<!-- Research Projects Grid -->
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+					{displayProjects.map((project) => (
+						<div 
+							class="research-project bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+							data-category={project.category}
+							data-status={project.status}
+						>
+							{project.featured && (
+								<div class="absolute top-4 left-4 z-10">
+									<span class="inline-flex items-center px-3 py-1 bg-amber-500 text-white text-sm font-medium rounded-full">
+										Featured
+									</span>
+								</div>
+							)}
+							
+							<!-- Project Image -->
+							<div class="aspect-w-16 aspect-h-9 bg-gradient-to-br from-gray-100 to-gray-200 relative">
+								<div class="w-full h-48 bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 flex items-center justify-center">
+									<div class="text-center text-white">
+										<div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+											<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+											</svg>
+										</div>
+										<p class="text-sm opacity-75">Research Visualization</p>
 									</div>
 								</div>
-							</Card>
+								<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+							</div>
+
+							<!-- Project Content -->
+							<div class="p-6">
+								<!-- Category and Status -->
+								<div class="flex items-center justify-between mb-3">
+									<span class="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
+										{project.category}
+									</span>
+									<span class={`inline-flex items-center px-2 py-1 text-xs font-medium rounded ${
+										project.status === 'Active' ? 'bg-green-100 text-green-800' :
+										project.status === 'Completed' ? 'bg-blue-100 text-blue-800' :
+										'bg-yellow-100 text-yellow-800'
+									}`}>
+										{project.status}
+									</span>
+								</div>
+
+								<h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+									{project.title}
+								</h3>
+
+								<p class="text-gray-600 mb-4 leading-relaxed">
+									{project.description}
+								</p>
+
+								<!-- Principal Investigator -->
+								<div class="mb-4">
+									<p class="text-sm text-gray-500">Principal Investigator</p>
+									<p class="text-sm font-medium text-gray-900">{project.PI}</p>
+								</div>
+
+								{project.funding && (
+									<div class="mb-4">
+										<p class="text-sm text-gray-500">Funding</p>
+										<p class="text-sm font-medium text-gray-900">{project.funding}</p>
+									</div>
+								)}
+
+								<!-- Tags -->
+								<div class="flex flex-wrap gap-2 mb-6">
+									{project.tags.slice(0, 3).map((tag) => (
+										<span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">
+											{tag}
+										</span>
+									))}
+									{project.tags.length > 3 && (
+										<span class="px-2 py-1 bg-gray-100 text-gray-500 text-xs rounded">
+											+{project.tags.length - 3} more
+										</span>
+									)}
+								</div>
+
+								<!-- Action Button -->
+								<a 
+									href={project.link}
+									class="inline-flex items-center w-full justify-center px-4 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg hover:from-amber-600 hover:to-orange-600 transition-all duration-200 transform group-hover:scale-105"
+								>
+									Explore Research
+									<svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+									</svg>
+								</a>
+							</div>
 						</div>
 					))}
 				</div>
 
-				<!-- No Results Message -->
-				<div id="no-results" class="hidden text-center py-12">
-					<svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-					</svg>
-					<h3 class="text-lg font-medium text-gray-900 mb-2">No projects found</h3>
-					<p class="text-gray-600">Try selecting a different category or view all projects.</p>
+				<!-- No Projects Message -->
+				<div id="no-projects" class="text-center py-16 hidden">
+					<div class="max-w-md mx-auto">
+						<svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.034 0-3.894.76-5.291 2.009M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+						</svg>
+						<h3 class="text-lg font-medium text-gray-900 mb-2">No projects found</h3>
+						<p class="text-gray-500">Try selecting a different category or status filter.</p>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Research Impact -->
-		<section class="py-20 bg-white">
+		<!-- Featured Research Highlights -->
+		<section class="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="text-center mb-16">
-					<h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-						Research Impact & Recognition
+					<h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
+						Research Highlights
 					</h2>
-					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
-						Our research is making real-world impact and gaining recognition in the global AI community
+					<p class="text-xl text-blue-100 max-w-3xl mx-auto">
+						Breakthrough discoveries and innovations that are shaping the future of human-AI collaboration
 					</p>
 				</div>
 
-				<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-					<div class="text-center group">
-						<div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-							<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-							</svg>
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+					{displayProjects.filter(p => p.featured).slice(0, 2).map((project) => (
+						<div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+							<div class="flex items-center mb-6">
+								<div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-lg flex items-center justify-center mr-4">
+									<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+									</svg>
+								</div>
+								<div>
+									<h3 class="text-2xl font-bold text-white">{project.title}</h3>
+									<p class="text-blue-200">{project.category}</p>
+								</div>
+							</div>
+							<p class="text-blue-100 mb-6 leading-relaxed">
+								{project.description}
+							</p>
+							<div class="flex items-center justify-between">
+								<span class="text-blue-200 text-sm">Led by {project.PI}</span>
+								<a href={project.link} class="inline-flex items-center text-white font-medium hover:text-amber-300 transition-colors">
+									Learn More
+									<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+									</svg>
+								</a>
+							</div>
 						</div>
-						<h3 class="text-xl font-bold text-gray-900 mb-4">Award-Winning Research</h3>
-						<p class="text-gray-600">Recognized by leading AI conferences and industry organizations for groundbreaking contributions to augmented intelligence.</p>
-					</div>
-
-					<div class="text-center group">
-						<div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-							<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-							</svg>
-						</div>
-						<h3 class="text-xl font-bold text-gray-900 mb-4">Industry Collaboration</h3>
-						<p class="text-gray-600">Partnering with leading organizations to translate research insights into practical solutions that benefit society.</p>
-					</div>
-
-					<div class="text-center group">
-						<div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-							<svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-							</svg>
-						</div>
-						<h3 class="text-xl font-bold text-gray-900 mb-4">Open Science</h3>
-						<p class="text-gray-600">Committed to open research practices, sharing code, datasets, and findings to advance the global AI research community.</p>
-					</div>
+					))}
 				</div>
 			</div>
 		</section>
 
-		<!-- Call to Action -->
+		<!-- Research Collaboration -->
 		<section class="py-20 bg-gradient-to-r from-amber-500 to-orange-500">
 			<div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
 				<h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
 					Join Our Research Community
 				</h2>
 				<p class="text-xl text-amber-100 mb-8">
-					Whether you're a student, researcher, or industry partner, there are many ways to get involved in our groundbreaking research.
+					Collaborate with leading researchers in augmented intelligence. Whether you're an academic researcher, industry partner, or policy maker, we offer opportunities for meaningful collaboration.
 				</p>
 				<div class="flex flex-col sm:flex-row gap-4 justify-center">
 					<a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-200">
-						Collaborate With Us
+						Start a Collaboration
 					</a>
 					<a href="/thought-leadership" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-200">
 						View Publications
@@ -281,44 +325,43 @@ const categories = ["All", "Workforce Innovation", "Cognitive Enhancement", "EdT
 </Layout>
 
 <script>
-	// Filter functionality
+	// Category filtering functionality
 	document.addEventListener('DOMContentLoaded', function() {
 		const filterButtons = document.querySelectorAll('.filter-btn');
-		const researchCards = document.querySelectorAll('.research-card');
-		const noResults = document.getElementById('no-results');
+		const projects = document.querySelectorAll('.research-project');
+		const noProjectsMessage = document.getElementById('no-projects');
 
 		filterButtons.forEach(button => {
 			button.addEventListener('click', function() {
-				const category = this.dataset.category;
+				const selectedCategory = this.dataset.category;
 
 				// Update active button
 				filterButtons.forEach(btn => {
-					btn.classList.remove('bg-amber-500', 'text-white', 'border-amber-500');
-					btn.classList.add('bg-white', 'text-gray-700', 'hover:bg-gray-100', 'border-gray-200');
+					btn.classList.remove('bg-amber-500', 'text-white');
+					btn.classList.add('bg-gray-100', 'text-gray-700');
 				});
-				
-				this.classList.add('bg-amber-500', 'text-white', 'border-amber-500');
-				this.classList.remove('bg-white', 'text-gray-700', 'hover:bg-gray-100', 'border-gray-200');
+				this.classList.add('bg-amber-500', 'text-white');
+				this.classList.remove('bg-gray-100', 'text-gray-700');
 
-				// Filter cards
+				// Filter projects
 				let visibleCount = 0;
-				researchCards.forEach(card => {
-					if (category === 'All' || card.dataset.category === category) {
-						card.style.display = 'block';
+				projects.forEach(project => {
+					const projectCategory = project.dataset.category;
+					if (selectedCategory === 'All' || projectCategory === selectedCategory) {
+						project.style.display = 'block';
 						visibleCount++;
 					} else {
-						card.style.display = 'none';
+						project.style.display = 'none';
 					}
 				});
 
-				// Show/hide no results message
+				// Show/hide no projects message
 				if (visibleCount === 0) {
-					noResults?.classList.remove('hidden');
+					noProjectsMessage.classList.remove('hidden');
 				} else {
-					noResults?.classList.add('hidden');
+					noProjectsMessage.classList.add('hidden');
 				}
 			});
 		});
 	});
 </script>
-

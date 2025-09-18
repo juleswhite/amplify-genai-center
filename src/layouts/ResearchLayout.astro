@@ -1,0 +1,327 @@
+---
+import Layout from './Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'research'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const { data } = entry;
+---
+
+<Layout title={`${data.title} | Research | Amplified Generative AI Innovation Center`}>
+  <Header />
+  
+  <main class="pt-16 lg:pt-20">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20 lg:py-32 relative overflow-hidden">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <svg class="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="research-pattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+              <circle cx="5" cy="5" r="1" fill="currentColor"/>
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#research-pattern)"/>
+        </svg>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="text-white">
+            <!-- Breadcrumb -->
+            <nav class="mb-6">
+              <ol class="flex items-center space-x-2 text-sm">
+                <li><a href="/" class="text-blue-300 hover:text-white transition-colors">Home</a></li>
+                <li class="text-gray-400">/</li>
+                <li><a href="/research" class="text-blue-300 hover:text-white transition-colors">Research</a></li>
+                <li class="text-gray-400">/</li>
+                <li class="text-gray-300">{data.title}</li>
+              </ol>
+            </nav>
+
+            <!-- Category Badge -->
+            <div class="mb-6">
+              <span class="inline-flex items-center px-3 py-1 bg-amber-500/20 text-amber-300 text-sm font-medium rounded-full border border-amber-400/30">
+                {data.category}
+              </span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              {data.title}
+            </h1>
+            
+            <p class="text-xl lg:text-2xl text-blue-100 mb-8 leading-relaxed">
+              {data.description}
+            </p>
+
+            <!-- Project Meta Information -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+              <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div class="text-sm text-blue-200 mb-1">Principal Investigator</div>
+                <div class="text-white font-semibold">{data.PI}</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <div class="text-sm text-blue-200 mb-1">Status</div>
+                <div class={`inline-flex items-center px-2 py-1 rounded text-sm font-medium ${
+                  data.status === 'Active' ? 'bg-green-500/20 text-green-300' :
+                  data.status === 'Completed' ? 'bg-blue-500/20 text-blue-300' :
+                  'bg-yellow-500/20 text-yellow-300'
+                }`}>
+                  {data.status}
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="#overview" class="inline-flex items-center justify-center px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-lg transition-colors transform hover:scale-105">
+                Read Full Research
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+              </a>
+              {data.relatedPapers && data.relatedPapers.length > 0 && (
+                <a href="#papers" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white hover:bg-white/10 font-semibold rounded-lg transition-colors">
+                  View Publications
+                  <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                  </svg>
+                </a>
+              )}
+            </div>
+          </div>
+
+          <!-- Hero Image/Visualization -->
+          <div class="lg:pl-12">
+            <div class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div class="aspect-square bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6">
+                <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+              </div>
+              <div class="text-center">
+                <h3 class="text-white font-semibold text-lg mb-2">Research Impact</h3>
+                <div class="grid grid-cols-2 gap-4 text-sm">
+                  {data.funding && (
+                    <div class="text-blue-200">
+                      <div class="text-white font-medium">Funding</div>
+                      <div>{data.funding}</div>
+                    </div>
+                  )}
+                  <div class="text-blue-200">
+                    <div class="text-white font-medium">Started</div>
+                    <div>{data.startDate.getFullYear()}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Tags -->
+    {data.tags && data.tags.length > 0 && (
+      <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-wrap gap-3 justify-center">
+            {data.tags.map((tag) => (
+              <span class="inline-flex items-center px-4 py-2 bg-white text-gray-700 text-sm font-medium rounded-full border border-gray-200 hover:border-amber-300 transition-colors">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Main Content -->
+    <section id="overview" class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Collaborators -->
+        {data.collaborators && data.collaborators.length > 0 && (
+          <div class="mb-12 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Research Team</h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full font-medium">
+                {data.PI} (Principal Investigator)
+              </span>
+              {data.collaborators.map((collaborator) => (
+                <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">
+                  {collaborator}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Markdown Content -->
+        <article class="prose prose-lg prose-gray max-w-none">
+          <Content />
+        </article>
+      </div>
+    </section>
+
+    <!-- Related Papers -->
+    {data.relatedPapers && data.relatedPapers.length > 0 && (
+      <section id="papers" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Related Publications</h2>
+            <p class="text-xl text-gray-600">Academic papers and publications from this research project</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {data.relatedPapers.map((paper) => (
+              <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden group">
+                <div class="p-6">
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
+                      {paper.year || 'Published'}
+                    </span>
+                    <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                    </svg>
+                  </div>
+                  <h3 class="text-lg font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    {paper.title}
+                  </h3>
+                  {paper.venue && (
+                    <p class="text-sm text-gray-600 mb-4 italic">{paper.venue}</p>
+                  )}
+                  <a href={paper.url} class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:underline">
+                    Read Paper
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Related Projects -->
+    {data.relatedProjects && data.relatedProjects.length > 0 && (
+      <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Related Research</h2>
+            <p class="text-xl text-gray-600">Explore other research projects that connect to this work</p>
+          </div>
+
+          <div class="flex flex-wrap gap-4 justify-center">
+            {data.relatedProjects.map((projectSlug) => (
+              <a href={`/research/${projectSlug}`} class="group">
+                <div class="px-6 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-lg hover:from-amber-600 hover:to-orange-600 transition-all transform hover:scale-105 shadow-lg">
+                  <div class="flex items-center space-x-2">
+                    <span class="font-medium">{projectSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</span>
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Back to Research -->
+    <section class="py-16 bg-gradient-to-r from-gray-900 to-gray-800">
+      <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-white mb-6">Explore More Research</h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Discover other groundbreaking research projects from our center
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/research" class="inline-flex items-center px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-semibold rounded-lg transition-colors transform hover:scale-105">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            All Research Projects
+          </a>
+          <a href="/contact" class="inline-flex items-center px-8 py-4 border-2 border-gray-400 text-gray-300 hover:text-white hover:border-white font-semibold rounded-lg transition-colors">
+            Collaborate With Us
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* Custom prose styles for research content */
+  .prose {
+    --tw-prose-headings: #111827;
+    --tw-prose-body: #374151;
+    --tw-prose-lead: #4b5563;
+    --tw-prose-links: #2563eb;
+    --tw-prose-bold: #111827;
+    --tw-prose-counters: #6b7280;
+    --tw-prose-bullets: #9ca3af;
+    --tw-prose-hr: #d1d5db;
+    --tw-prose-quotes: #111827;
+    --tw-prose-quote-borders: #d1d5db;
+    --tw-prose-captions: #374151;
+    --tw-prose-code: #111827;
+    --tw-prose-pre-code: #f3f4f6;
+    --tw-prose-pre-bg: #111827;
+    --tw-prose-th-borders: #d1d5db;
+    --tw-prose-td-borders: #e5e7eb;
+  }
+
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4 {
+    scroll-margin-top: 5rem;
+  }
+
+  .prose blockquote {
+    border-left: 4px solid #f59e0b;
+    background-color: #fef3c7;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .prose code {
+    background-color: #f3f4f6;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+
+  .prose pre {
+    background-color: #111827;
+    color: #f3f4f6;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+  }
+
+  .prose pre code {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .prose ul > li::marker {
+    color: #f59e0b;
+  }
+
+  .prose ol > li::marker {
+    color: #d97706;
+  }
+</style>
