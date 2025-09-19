@@ -5,6 +5,7 @@ import Hero from '../components/Hero.astro';
 import Footer from '../components/Footer.astro';
 import Card from '../components/Card.astro';
 import { getCollection } from 'astro:content';
+// Updated to include new research projects
 
 // Get all published research projects
 const researchProjects = await getCollection('research', ({ data }) => {
